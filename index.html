@@ -6,269 +6,310 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="color-scheme" content="light">
 <title>Hiver 2026</title>
-<meta name="description" content="ลาพักร้อน 18 ธ.ค. 2026 – 3 ม.ค. 2027 · ปฏิทินลา ช่วงเวลาที่ติดต่อได้ และเส้นทางทริป">
+<meta name="description" content="ลาพักร้อน 18 ธ.ค. 2026 – 3 ม.ค. 2027 · เส้นทาง ปฏิทินลา ช่วงเวลาที่ติดต่อได้ และแผนรายวัน">
 <link rel="preload" as="image" href="img/cover.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&family=Noto+Serif+Thai:wght@300;400&family=IBM+Plex+Sans+Thai:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@400;500;600&family=Noto+Serif+Thai:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: a maison lookbook. Full-bleed photographic chapters on stone paper,
-   hairline rules, a centred wordmark, and a single saddle-leather accent. Light only, by choice. */
+/* Layout: a maison lookbook. Photographic chapters on stone paper, hairline rules,
+   a centred wordmark and one saddle-leather accent. Light only, by choice. */
 :root{
- --stone:#ebe8e2;      /* page */
- --porcelain:#f7f6f2;  /* raised surfaces */
- --ink:#151413;        /* text, the one solid block */
- --graphite:#4a4743;   /* secondary text */
- --taupe:#8a8277;      /* labels, muted */
- --rule:#d1ccc2;       /* hairlines */
- --cuir:#7b4f2e;       /* saddle leather accent, used sparingly */
- --ivory:#f4f1ea;      /* text on photographs */
- --display:"Italiana","Noto Serif Thai",Didot,"Bodoni 72",serif;
- --serif:"Cormorant Garamond","Noto Serif Thai",Garamond,serif;
- --thai:"Noto Serif Thai","Cormorant Garamond",serif;
- --body:"Montserrat","IBM Plex Sans Thai",system-ui,sans-serif;
- --gut:max(20px,env(safe-area-inset-left,0px));
+ --stone:#ece9e3;      /* page */
+ --porcelain:#f8f7f3;  /* raised surfaces */
+ --ink:#141312;        /* text, the one solid block */
+ --graphite:#3d3a36;   /* secondary text  (≈10:1 on stone) */
+ --taupe:#655e54;      /* labels          (≈5.6:1 on stone) */
+ --rule:#cfc9be;       /* hairlines */
+ --cuir:#7a4b2a;       /* saddle leather accent */
+ --ivory:#f6f3ec;      /* text on photographs */
+ --display:"Bodoni Moda","Noto Serif Thai",Didot,"Bodoni 72",Georgia,serif;
+ --thai:"Noto Serif Thai","Bodoni Moda",Georgia,serif;
+ --body:"Montserrat","IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --cap:"Cormorant Garamond",Georgia,serif;
  color-scheme:light;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--stone)}
-body{background:var(--stone);color:var(--ink);font:300 15.5px/1.8 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--stone);color:var(--ink);font:400 16px/1.75 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before{transition:none!important;animation:none!important}}
-.wrap{max-width:1240px;margin:0 auto;padding-left:var(--gut);padding-right:max(20px,env(safe-area-inset-right,0px))}
-.cap{font:400 10.5px/1.2 var(--body);letter-spacing:.34em;text-transform:uppercase;color:var(--taupe)}
-.it{font-family:var(--serif);font-style:italic}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.lbl{font:600 11.5px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
 .tnum{font-variant-numeric:lining-nums tabular-nums}
-h1,h2,h3{font-weight:400;text-wrap:balance}
+h1,h2,h3{font-weight:500;text-wrap:balance}
 
-/* ── masthead ─────────────────────────────── */
+/* masthead */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--stone);z-index:31}
-.mast{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(235,232,226,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
-.mast .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px}
-.mast nav{display:flex;gap:30px}
+.mast{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(236,233,227,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.mast .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px}
+.mast nav{display:flex;gap:28px}
 .mast nav.r{justify-content:flex-end}
-.mast nav a{font:400 10px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;text-decoration:none;color:var(--graphite);padding:10px 0;position:relative}
-.mast nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .35s ease}
+.mast nav a{font:500 11.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--graphite);padding:10px 0;position:relative}
+.mast nav a::after{content:"";position:absolute;left:0;right:0;bottom:3px;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .3s ease}
 .mast nav a:hover::after,.mast nav a.on::after{transform:scaleX(1)}
 .mast nav a.on{color:var(--ink)}
-.word{font:400 22px/1 var(--display);letter-spacing:.55em;margin-right:-.55em;text-decoration:none;white-space:nowrap}
+.word{font:500 21px/1 var(--display);letter-spacing:.42em;margin-right:-.42em;text-decoration:none;white-space:nowrap}
 
-/* ── cover ───────────────────────────────── */
-.cover{position:relative;height:clamp(540px,82vh,860px);overflow:hidden;background:#2b2a27}
-.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;filter:saturate(.62) contrast(1.04) brightness(.96);animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+/* cover */
+.cover{position:relative;height:clamp(540px,80vh,840px);overflow:hidden;background:#2b2a27}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;filter:saturate(.65) contrast(1.04);animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
 @keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
-.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,0) 25%,rgba(18,16,14,.35) 50%,rgba(18,16,14,.78) 100%)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,14,12,0) 22%,rgba(16,14,12,.42) 50%,rgba(16,14,12,.82) 100%)}
 .cover .in{position:absolute;left:0;right:0;bottom:0;z-index:2;color:var(--ivory);padding-bottom:clamp(40px,7vh,72px);text-shadow:0 1px 14px rgba(0,0,0,.35)}
-.cover .cap{color:rgba(244,241,234,.82)}
-.cover h1{font:400 clamp(64px,13vw,188px)/.86 var(--display);letter-spacing:.04em;margin:22px 0 26px;margin-left:-.04em}
-.cover .row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;border-top:1px solid rgba(244,241,234,.35);padding-top:20px}
-.cover .dates{font:400 clamp(22px,2.6vw,32px)/1 var(--display);letter-spacing:.14em}
-.cover .itin{font:400 10.5px/1.6 var(--body);letter-spacing:.32em;text-transform:uppercase;color:rgba(244,241,234,.85)}
-.cover .credit{position:absolute;right:max(14px,env(safe-area-inset-right,0px));top:14px;z-index:2;font:italic 400 12px/1 var(--serif);color:rgba(244,241,234,.7)}
+.cover .lbl{color:rgba(246,243,236,.9)}
+.cover h1{font:500 clamp(64px,12vw,170px)/.9 var(--display);letter-spacing:.02em;margin:18px 0 24px -.03em}
+.cover .row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 40px;border-top:1px solid rgba(246,243,236,.4);padding-top:20px}
+.cover .dates{font:500 clamp(22px,2.6vw,32px)/1.1 var(--display);letter-spacing:.06em}
+.cover .itin{font:500 12px/1.6 var(--body);letter-spacing:.18em;text-transform:uppercase;color:rgba(246,243,236,.92)}
 
-/* ── note + status ───────────────────────── */
-.note{padding:96px 0 70px;text-align:center}
-.note p{font:300 clamp(19px,2.1vw,24px)/1.75 var(--thai);max-width:30em;margin:22px auto 0;color:var(--ink)}
-.note .now{display:inline-flex;align-items:center;gap:12px;margin-top:34px;font:400 12.5px/1.5 var(--body);color:var(--graphite);text-align:left}
-.note .now i{width:5px;height:5px;border-radius:50%;background:var(--cuir);flex:none}
-.status{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
-.status>div{padding:30px 22px 32px;text-align:center}
-.status>div+div{border-left:1px solid var(--rule)}
-.status b{display:block;font:400 34px/1.1 var(--display);margin:16px 0 8px;white-space:nowrap}
-.status span{font:300 13px/1.5 var(--body);color:var(--graphite)}
+/* intro note + status strip */
+.note{padding:90px 0 64px;text-align:center}
+.note p{font:400 clamp(19px,2.1vw,23px)/1.75 var(--thai);max-width:31em;margin:20px auto 0}
+.note .now{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:12px 20px;border:1px solid var(--rule);background:var(--porcelain);font:500 14px/1.5 var(--body);color:var(--graphite);text-align:left}
+.note .now i{width:7px;height:7px;border-radius:50%;background:var(--cuir);flex:none}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.stats>div{padding:28px 22px 30px}
+.stats>div+div{border-left:1px solid var(--rule)}
+.stats b{display:block;font:500 34px/1.1 var(--display);margin:14px 0 6px;white-space:nowrap}
+.stats span{font:400 14px/1.5 var(--body);color:var(--graphite)}
 
-/* ── section heads ───────────────────────── */
-.sec{padding-top:140px}
-.sh{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px;padding-bottom:28px;margin-bottom:42px;border-bottom:1px solid var(--rule)}
-.sh .cap{display:block;margin-bottom:18px}
-.sh h2{font:400 clamp(40px,5.4vw,68px)/1 var(--display);letter-spacing:.02em}
-.sh h2 small{display:block;font:300 16px/1.6 var(--thai);letter-spacing:0;color:var(--graphite);margin-top:16px}
-.clocks{display:flex;gap:40px;text-align:right}
-.clocks b{display:block;font:400 40px/1 var(--display)}
-.clocks span{display:block;margin-top:10px}
+/* section heads */
+.sec{padding-top:130px}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px;padding-bottom:26px;margin-bottom:40px;border-bottom:1px solid var(--rule)}
+.sh .lbl{display:block;margin-bottom:16px}
+.sh h2{font:500 clamp(36px,4.8vw,60px)/1.08 var(--display)}
+.sh p{font:400 17px/1.7 var(--thai);color:var(--graphite);margin-top:14px;max-width:44em}
+.clocks{display:flex;gap:36px;text-align:right}
+.clocks b{display:block;font:500 38px/1 var(--display)}
+.clocks .lbl{display:block;margin-top:10px}
 
-/* ── calendar ────────────────────────────── */
-.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-left:1px solid var(--rule);border-top:1px solid var(--rule)}
-.dow{padding:14px 14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.cell{position:relative;min-height:118px;padding:14px 14px 14px;display:flex;flex-direction:column;text-align:left;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .25s}
+/* route at a glance */
+.line{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin-bottom:34px}
+.line::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:19px;height:1px;background:var(--ink)}
+.stop{position:relative;text-align:center}
+.stop i{display:grid;place-items:center;width:38px;height:38px;margin:0 auto;border:1px solid var(--ink);border-radius:50%;background:var(--stone);font:500 16px/1 var(--display);font-style:normal}
+.stop.home i{background:var(--ink);color:var(--ivory)}
+.stop span{display:block;margin-top:12px;font:600 11.5px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.rcards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.rc{background:var(--porcelain);border:1px solid var(--rule);padding:20px 18px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.rc .when{font:600 11px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--cuir)}
+.rc b{font:500 24px/1.15 var(--display)}
+.rc p{font:400 14px/1.6 var(--body);color:var(--graphite)}
+.rc .via{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font:500 12.5px/1.5 var(--body);color:var(--taupe)}
+
+/* traveller */
+.trav{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.trav .ph{aspect-ratio:4/5;overflow:hidden;background:var(--porcelain)}
+.trav .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.65)}
+.trav h2{font:500 clamp(36px,4.6vw,56px)/1.08 var(--display);margin:16px 0 18px}
+.trav p{font:400 18px/1.8 var(--thai);color:var(--graphite)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+.tags span{font:600 11.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink)}
+.traits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.traits>div{padding:20px 18px 4px 0}
+.traits>div+div{padding-left:18px;border-left:1px solid var(--rule)}
+.traits b{display:block;font:500 22px/1.25 var(--display);margin-top:10px}
+.traits span{display:block;font:400 14px/1.55 var(--body);color:var(--graphite);margin-top:4px}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:12px 28px;font:500 14px/1.4 var(--body);color:var(--graphite)}
+.legend span{display:inline-flex;align-items:center;gap:10px}
+.legend i{width:22px;height:14px;border:1px solid var(--rule);background:var(--stone);position:relative;flex:none}
+.legend .lw{background:var(--stone)}
+.legend .ll{background:var(--porcelain)}.legend .ll::before{content:"";position:absolute;left:2px;right:2px;top:-1px;height:3px;background:var(--cuir)}
+.legend .lt{background:repeating-linear-gradient(90deg,var(--porcelain) 0 4px,var(--rule) 4px 5px)}
+.legend .lh{background:var(--porcelain);border-style:dashed;border-color:var(--taupe)}
+.legend .lb{background:var(--ink);border-color:var(--ink)}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-left:1px solid var(--rule);border-top:1px solid var(--rule);margin-top:26px}
+.dow{padding:12px 14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cell{position:relative;min-height:118px;padding:14px;display:flex;flex-direction:column;text-align:left;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .2s}
 .cell:hover{background:var(--porcelain)}
-.cell .d{font:400 30px/1 var(--display)}
-.cell .mo{font:italic 400 13px/1 var(--serif);color:var(--taupe);margin-left:6px}
-.cell .c{font:400 9px/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--graphite);margin-top:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cell .s{margin-top:auto;font:300 12.5px/1.35 var(--body);color:var(--taupe)}
+.cell .d{font:500 28px/1 var(--display)}
+.cell .mo{font:600 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--taupe);margin-left:6px}
+.cell .c{font:600 10.5px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--graphite);margin-top:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell .s{margin-top:auto;font:500 13px/1.35 var(--body);color:var(--taupe)}
 .cell.work .d{color:var(--taupe)}
-.cell.leave{background:var(--porcelain)}
-.cell.leave .s{color:var(--ink)}
-.cell.leave::before{content:"";position:absolute;left:14px;right:14px;top:0;height:2px;background:var(--cuir)}
+.cell.leave,.cell.travel{background:var(--porcelain)}
+.cell.leave::before,.cell.travel::before{content:"";position:absolute;left:14px;right:14px;top:0;height:3px;background:var(--cuir)}
+.cell.travel{background:repeating-linear-gradient(90deg,var(--porcelain) 0 9px,#f0ede7 9px 10px)}
+.cell.leave .s,.cell.travel .s{color:var(--ink)}
 .cell.off .d,.cell.off .s{color:var(--taupe)}
-.cell.hol{background:var(--porcelain)}
-.cell.hol .s{font:italic 400 15px/1.2 var(--serif);color:var(--ink)}
+.cell.hol{background:var(--porcelain);outline:1px dashed var(--taupe);outline-offset:-6px}
+.cell.hol .s{color:var(--ink)}
 .cell.back{background:var(--ink)}
 .cell.back .d,.cell.back .s,.cell.back .c,.cell.back .mo{color:var(--ivory)}
-.cell.dim{opacity:.42}
-.cell[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--ink)}
-.cell.back[aria-pressed="true"]{box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 5px var(--ivory)}
-.cell .td{position:absolute;top:14px;right:14px;font:italic 400 13px/1 var(--serif);color:var(--cuir)}
-.legend{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:22px;font:300 13px/1.4 var(--body);color:var(--graphite)}
-.legend span{display:inline-flex;align-items:center;gap:10px}
-.legend i{width:20px;height:13px;border:1px solid var(--rule);background:var(--stone);position:relative;flex:none}
-.legend .l1{background:var(--porcelain)}.legend .l1::before{content:"";position:absolute;left:2px;right:2px;top:-1px;height:2px;background:var(--cuir)}
-.legend .l3{background:var(--porcelain)}
-.legend .l4{background:var(--ink);border-color:var(--ink)}
-.panel{display:grid;grid-template-columns:1.1fr 1fr 1fr;margin-top:44px;background:var(--porcelain);border:1px solid var(--rule)}
-.panel>div{padding:28px 28px 30px;min-width:0}
+.cell.dim{opacity:.45}
+.cell[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink)}
+.cell.back[aria-pressed="true"]{box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 6px var(--ivory)}
+.cell .td{position:absolute;top:14px;right:14px;font:600 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--cuir)}
+.panel{display:grid;grid-template-columns:1.1fr 1fr 1fr;margin-top:28px;background:var(--porcelain);border:1px solid var(--rule)}
+.panel>div{padding:24px 26px 26px;min-width:0}
 .panel>div+div{border-left:1px solid var(--rule)}
-.panel .cap{display:block;margin-bottom:14px}
-.panel h3{font:400 30px/1.2 var(--display)}
-.panel h3.th{font:300 24px/1.35 var(--thai)}
-.panel p{font:300 14.5px/1.65 var(--body);color:var(--graphite);margin-top:6px}
-.panel p b{font-weight:400;color:var(--ink)}
+.panel .lbl{display:block;margin-bottom:12px}
+.panel h3{font:500 26px/1.25 var(--display)}
+.panel h3.th{font:500 22px/1.4 var(--thai)}
+.panel p{font:400 15px/1.6 var(--body);color:var(--graphite);margin-top:6px}
 
-/* ── hours ───────────────────────────────── */
+/* hours */
+.sub{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 24px;margin:80px 0 18px}
+.sub h3{font:500 30px/1.2 var(--display)}
+.sub p{font:400 14.5px/1.6 var(--body);color:var(--graphite)}
 .hrs{border-top:1px solid var(--ink)}
-.hh,.hr{display:grid;grid-template-columns:150px 140px 200px minmax(0,1fr);gap:24px;align-items:center}
+.hh,.hr{display:grid;grid-template-columns:150px 130px 220px minmax(0,1fr);gap:24px;align-items:center}
 .hh{padding:14px 0;border-bottom:1px solid var(--rule)}
-.scale{position:relative;height:12px}
-.scale span{position:absolute;top:0;font:400 10px/1 var(--body);color:var(--taupe);transform:translateX(-50%)}
+.scale{position:relative;height:14px}
+.scale span{position:absolute;top:0;font:500 11.5px/1 var(--body);color:var(--taupe);transform:translateX(-50%)}
 .scale span:first-child{transform:none}.scale span:last-child{transform:translateX(-100%)}
 .hr{min-height:74px;border-bottom:1px solid var(--rule)}
-.hr .dt{display:flex;align-items:baseline;gap:12px}
-.hr .dt b{font:400 30px/1 var(--display)}
-.hr .ct{font:400 10px/1.4 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--graphite)}
-.hr .st{font:300 14px/1.45 var(--body)}
-.hr .st small{display:block;font:italic 400 14px/1.3 var(--serif);color:var(--taupe)}
+.hr .dt{display:flex;align-items:baseline;gap:10px}
+.hr .dt b{font:500 28px/1 var(--display)}
+.hr .ct{font:600 11.5px/1.4 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--graphite)}
+.hr .st{font:500 14.5px/1.45 var(--body)}
+.hr .st small{display:block;font:400 13.5px/1.4 var(--body);color:var(--taupe)}
 .hr.off .dt b,.hr.off .st{color:var(--taupe)}
-.track{position:relative;height:24px}
+.track{position:relative;height:26px}
 .track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--rule)}
 .track .office{position:absolute;top:6px;bottom:6px;background:var(--porcelain);border:1px solid var(--rule)}
 .track .seg{position:absolute;top:9px;bottom:9px;background:var(--ink)}
-.track .lab{position:absolute;top:-12px;font:400 11px/1 var(--body);color:var(--ink);white-space:nowrap}
-.track .lab.m{color:var(--taupe);font:italic 400 13px/1 var(--serif)}
-.hnote{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:20px;font:300 13px/1.5 var(--body);color:var(--graphite)}
-.hnote i{display:inline-block;width:20px;height:6px;margin-right:10px;vertical-align:2px}
+.track .lab{position:absolute;top:-13px;font:600 12px/1 var(--body);color:var(--ink);white-space:nowrap}
+.track .lab.m{color:var(--taupe);font-weight:500}
+.hnote{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:18px;font:500 14px/1.5 var(--body);color:var(--graphite)}
+.hnote i{display:inline-block;width:22px;height:7px;margin-right:10px;vertical-align:2px}
 
-/* ── voyage: chapters ────────────────────── */
-.route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
-.route a{display:block;text-decoration:none;padding:24px 22px 26px;transition:background .25s}
-.route a+a{border-left:1px solid var(--rule)}
-.route a:hover{background:var(--porcelain)}
-.route .n{font:italic 400 15px/1 var(--serif);color:var(--cuir)}
-.route b{display:block;font:400 30px/1.1 var(--display);margin:14px 0 6px}
-.route span{font:300 13px/1.5 var(--body);color:var(--graphite)}
-
-.chap{padding-top:120px}
-.chero{position:relative;height:clamp(420px,62vw,720px);overflow:hidden;background:#2b2a27}
-.chero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.6) contrast(1.03);transform:scale(1.04);transition:transform 2.2s cubic-bezier(.2,.7,.2,1)}
+/* daily plan chapters */
+.chap{padding-top:110px}
+.chero{position:relative;height:clamp(400px,58vw,680px);overflow:hidden;background:#2b2a27}
+.chero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.62) contrast(1.03);transform:scale(1.04);transition:transform 2.2s cubic-bezier(.2,.7,.2,1)}
 .chero.in img{transform:scale(1)}
-.chero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,0) 40%,rgba(18,16,14,.6) 100%)}
-.chero .t{position:absolute;left:0;right:0;bottom:0;z-index:2;color:var(--ivory);padding-bottom:clamp(30px,5vw,56px)}
-.chero .cap{color:rgba(244,241,234,.85)}
-.chero h2{font:400 clamp(60px,10vw,150px)/.9 var(--display);letter-spacing:.04em;margin:16px 0 0 -.03em}
-.chero .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(244,241,234,.35);font:400 10.5px/1.6 var(--body);letter-spacing:.3em;text-transform:uppercase;color:rgba(244,241,234,.88)}
-.chero .meta em{font:italic 400 15px/1 var(--serif);letter-spacing:0;text-transform:none}
-.intro{max-width:760px;margin:64px auto 18px;text-align:center}
-.intro p{font:300 clamp(18px,1.9vw,21px)/1.85 var(--thai);color:var(--ink)}
+.chero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,14,12,0) 35%,rgba(16,14,12,.72) 100%)}
+.chero .t{position:absolute;left:0;right:0;bottom:0;z-index:2;color:var(--ivory);padding-bottom:clamp(28px,5vw,54px);text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.chero .lbl{color:rgba(246,243,236,.92)}
+.chero h2{font:500 clamp(56px,9vw,132px)/.95 var(--display);margin:14px 0 0 -.02em}
+.chero .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 30px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(246,243,236,.4);font:500 13px/1.6 var(--body);letter-spacing:.1em;text-transform:uppercase;color:rgba(246,243,236,.95)}
+.intro{max-width:780px;margin:56px auto 10px;text-align:center}
+.intro p{font:400 clamp(18px,1.9vw,21px)/1.85 var(--thai)}
+.cityfacts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;margin:20px 0 34px;font:500 14px/1.5 var(--body);color:var(--graphite)}
+.cityfacts b{font-weight:600;color:var(--ink)}
 
-.day{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,420px);gap:48px;padding:56px 0;border-bottom:1px solid var(--rule);align-items:start}
-.day:first-of-type{border-top:1px solid var(--rule)}
-.day .dn{position:sticky;top:96px}
-.day .dn b{display:block;font:400 92px/.8 var(--display)}
-.day .dn .wd{display:block;margin-top:18px}
-.day .dn .th{display:block;font:300 13px/1.5 var(--body);color:var(--graphite);margin-top:6px}
-.day h3{font:400 30px/1.3 var(--thai)}
-.day h3 .en{display:block;font:italic 400 19px/1.3 var(--serif);color:var(--taupe);margin-top:4px}
-.day ul{list-style:none;margin-top:26px;border-top:1px solid var(--rule)}
-.day li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:13px 0;border-bottom:1px solid var(--rule)}
-.day li .k{font:italic 400 14px/1.75 var(--serif);color:var(--cuir)}
-.day li b{font:400 15px/1.6 var(--body)}
-.day li span{display:block;font:300 13.5px/1.6 var(--body);color:var(--graphite)}
-.day .reach{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:22px}
-.day .reach strong{font:400 14px/1.4 var(--body)}
-.day .reach em{font:italic 400 15px/1.4 var(--serif);color:var(--taupe)}
+.day{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,400px);gap:44px;padding:50px 0;border-bottom:1px solid var(--rule);align-items:start}
+.days>.day:first-child{border-top:1px solid var(--rule)}
+.day .dn{position:sticky;top:98px}
+.day .dn b{display:block;font:500 80px/.85 var(--display)}
+.day .dn .wd{display:block;margin-top:16px;font:600 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.day .dn .temp{display:block;margin-top:8px;font:500 14px/1.4 var(--body);color:var(--taupe)}
+.type{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--ink);margin-bottom:16px}
+.type.leave{background:var(--porcelain);border-color:var(--cuir);color:var(--cuir)}
+.type.work{background:var(--ink);color:var(--ivory)}
+.type.off{border-color:var(--taupe);color:var(--graphite)}
+.type.hol{border-style:dashed}
+.day h3{font:500 30px/1.3 var(--thai)}
+.day h3 .en{display:block;font:500 17px/1.4 var(--display);color:var(--taupe);margin-top:4px}
+.day .lede{font:400 16px/1.75 var(--body);color:var(--graphite);margin-top:12px}
+.day ul{list-style:none;margin-top:22px;border-top:1px solid var(--rule)}
+.day li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.day li .k{font:500 16px/1.6 var(--display);color:var(--cuir)}
+.day li b{font:600 15.5px/1.55 var(--body)}
+.day li span{display:block;font:400 14.5px/1.6 var(--body);color:var(--graphite)}
+.avail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:22px;border:1px solid var(--rule);background:var(--porcelain)}
+.avail>div{padding:14px 16px;min-width:0}
+.avail>div+div{border-left:1px solid var(--rule)}
+.avail .lbl{display:block;font-size:10.5px}
+.avail b{display:block;font:600 15px/1.45 var(--body);margin-top:6px}
+.avail b.no{font-weight:500;color:var(--taupe)}
 .day figure{margin:0;min-width:0}
 .day .ph{aspect-ratio:4/5;overflow:hidden;background:var(--porcelain)}
-.day .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.62) contrast(1.03);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .7s}
+.day .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) contrast(1.03);transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .6s}
 .day figure:hover img{transform:scale(1.03);filter:saturate(.9)}
-.day figcaption{margin-top:12px;font:italic 400 14px/1.4 var(--serif);color:var(--taupe)}
-.day.plain{grid-template-columns:170px minmax(0,1fr);padding:40px 0}
-.day.plain h3{font-size:24px}
+.day figcaption{margin-top:12px;font:500 italic 16px/1.4 var(--cap);color:var(--graphite)}
+.day.plain{grid-template-columns:150px minmax(0,1fr)}
 
-/* ── while away ──────────────────────────── */
+/* while away */
 .away{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
-.away>div{padding:36px 30px 42px}
+.away>div{padding:34px 28px 40px}
 .away>div+div{border-left:1px solid var(--rule)}
-.away .n{font:italic 400 16px/1 var(--serif);color:var(--cuir)}
-.away h3{font:400 24px/1.35 var(--thai);margin:20px 0 12px}
-.away p{font:300 14.5px/1.75 var(--body);color:var(--graphite)}
+.away .n{font:500 18px/1 var(--display);color:var(--cuir)}
+.away h3{font:500 23px/1.35 var(--thai);margin:18px 0 10px}
+.away p{font:400 15px/1.75 var(--body);color:var(--graphite)}
 
-footer{padding:150px 0 64px;text-align:center}
-footer .w{font:400 clamp(48px,7vw,84px)/1 var(--display);letter-spacing:.1em}
-footer p{margin-top:24px;font:300 15px/1.7 var(--thai);color:var(--graphite)}
-footer .credit{margin-top:80px;padding-top:22px;border-top:1px solid var(--rule);font:300 11.5px/1.7 var(--body);color:var(--taupe)}
+footer{padding:140px 0 60px;text-align:center}
+footer .w{font:500 clamp(46px,6.5vw,78px)/1 var(--display);letter-spacing:.06em}
+footer p{margin-top:22px;font:400 16px/1.7 var(--thai);color:var(--graphite)}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
+.btns a{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 24px;border:1px solid var(--ink);transition:background .2s,color .2s}
+.btns a:first-child{background:var(--ink);color:var(--ivory)}
+.btns a:hover{background:var(--porcelain);color:var(--ink)}
+footer .credit{margin-top:80px;padding-top:20px;border-top:1px solid var(--rule);font:400 12.5px/1.7 var(--body);color:var(--taupe)}
 
-/* ── responsive ──────────────────────────── */
-@media (max-width:1060px){
- .day{grid-template-columns:120px minmax(0,1fr) minmax(0,320px);gap:32px}
+/* responsive */
+@media (max-width:1100px){
+ .rcards{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .day{grid-template-columns:120px minmax(0,1fr) minmax(0,300px);gap:30px}
  .day.plain{grid-template-columns:120px minmax(0,1fr)}
- .day .dn b{font-size:72px}
+ .day .dn b{font-size:64px}
  .hh,.hr{grid-template-columns:110px 120px minmax(0,1fr)}
  .hh .h3,.hr .st{display:none}
 }
-@media (max-width:860px){
+@media (max-width:880px){
  .mast nav{display:none}
  .mast .wrap{grid-template-columns:1fr}
  .word{justify-self:center}
- .status{grid-template-columns:1fr 1fr}
- .status>div:nth-child(3){border-left:0}
- .status>div:nth-child(n+3){border-top:1px solid var(--rule)}
- .route{grid-template-columns:1fr 1fr}
- .route a:nth-child(3){border-left:0}
- .route a:nth-child(n+3){border-top:1px solid var(--rule)}
- .day{grid-template-columns:1fr;gap:22px;padding:44px 0}
+ .stats{grid-template-columns:1fr 1fr}
+ .stats>div:nth-child(3){border-left:0}
+ .stats>div:nth-child(n+3){border-top:1px solid var(--rule)}
+ .line{display:none}
+ .rcards{grid-template-columns:1fr 1fr}
+ .trav{grid-template-columns:1fr;gap:34px}
+ .trav .ph{aspect-ratio:3/2}
+ .day{grid-template-columns:1fr;gap:20px;padding:40px 0}
  .day.plain{grid-template-columns:1fr}
  .day figure{order:-1}
  .day .ph{aspect-ratio:3/2}
- .day .dn{position:static;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
- .day .dn b{font-size:60px}
- .day .dn .wd,.day .dn .th{margin-top:0}
+ .day .dn{position:static;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+ .day .dn b{font-size:56px}
+ .day .dn .wd,.day .dn .temp{margin-top:0}
  .panel{grid-template-columns:1fr}
  .panel>div+div{border-left:0;border-top:1px solid var(--rule)}
  .away{grid-template-columns:1fr}
  .away>div+div{border-left:0;border-top:1px solid var(--rule)}
 }
 @media (max-width:640px){
- body{font-size:15px}
- .cover{height:clamp(500px,78vh,700px)}
- .note{padding:70px 0 52px}
- .status>div{padding:22px 10px 24px}
- .status b{font-size:25px}
- .sec{padding-top:96px}
- .sh{grid-template-columns:1fr;margin-bottom:30px}
- .clocks{justify-content:flex-start;text-align:left;margin-top:10px}
- .clocks b{font-size:32px}
- .dow{padding:10px 5px;letter-spacing:.12em;font-size:9px}
- .cell{min-height:76px;padding:8px 5px}
- .cell .d{font-size:21px}
+ .cover{height:clamp(500px,76vh,680px)}
+ .note{padding:64px 0 48px}
+ .stats>div{padding:20px 12px 22px}
+ .stats b{font-size:24px}
+ .stats span{font-size:13px}
+ .sec{padding-top:90px}
+ .sh{grid-template-columns:1fr;margin-bottom:28px}
+ .clocks{justify-content:flex-start;text-align:left;margin-top:8px}
+ .clocks b{font-size:30px}
+ .rcards{grid-template-columns:1fr}
+ .traits{grid-template-columns:1fr}
+ .traits>div,.traits>div+div{padding:16px 0;border-left:0;border-bottom:1px solid var(--rule)}
+ .dow{padding:9px 5px;letter-spacing:.06em;font-size:10px}
+ .cell{min-height:78px;padding:8px 5px}
+ .cell .d{font-size:20px}
  .cell .mo,.cell .c{display:none}
- .cell .s{font-size:10px;line-height:1.25}
- .cell.leave::before{left:5px;right:5px}
- .cell.hol .s{font-size:12px}
- .cell .td{top:7px;right:6px;font-size:0;width:5px;height:5px;border-radius:50%;background:var(--cuir)}
- .panel>div{padding:22px 20px}
+ .cell .s{font-size:10.5px;line-height:1.25}
+ .cell.leave::before,.cell.travel::before{left:5px;right:5px}
+ .cell .td{top:7px;right:6px;font-size:0;width:6px;height:6px;border-radius:50%;background:var(--cuir)}
+ .panel>div{padding:20px}
+ .sub{margin-top:64px}
  .hh{display:none}
  .hr{grid-template-columns:1fr auto;gap:6px 12px;padding:18px 0}
  .hr .ct{text-align:right}
  .hr .st{display:block;grid-column:1/-1}
  .hr .track{grid-column:1/-1;margin-top:16px}
- .route b{font-size:24px}
- .route a{padding:20px 14px 22px}
- .chap{padding-top:90px}
- .chero{height:clamp(380px,110vw,560px)}
- .intro{margin-top:44px}
+ .chap{padding-top:84px}
+ .chero{height:clamp(380px,105vw,540px)}
  .day h3{font-size:25px}
+ .avail{grid-template-columns:1fr}
+ .avail>div+div{border-left:0;border-top:1px solid var(--rule)}
 }
 </style>
 </head>
@@ -276,18 +317,17 @@ footer .credit{margin-top:80px;padding-top:22px;border-top:1px solid var(--rule)
 
 <header class="mast">
  <div class="wrap">
-  <nav aria-label="Sections"><a href="#calendrier">Calendrier</a><a href="#heures">Heures</a></nav>
+  <nav aria-label="Sections"><a href="#route">Route</a><a href="#traveller">Traveller</a><a href="#availability">Availability</a></nav>
   <a class="word" href="#top" aria-label="กลับขึ้นด้านบน">HIVER</a>
-  <nav class="r" aria-label="More sections"><a href="#voyage">Voyage</a><a href="#absence">Absence</a></nav>
+  <nav class="r" aria-label="More sections"><a href="#daily">Daily plan</a><a href="#absence">While away</a></nav>
  </div>
 </header>
 
 <main id="top">
 <section class="cover" aria-label="Hiver 2026">
  <img src="img/cover.webp" alt="ปารีสและหอไอเฟลมองจากหอ Saint-Jacques" width="1920" height="1200" fetchpriority="high">
- <span class="credit">Paris</span>
  <div class="in"><div class="wrap">
-  <span class="cap">Out of office · Collection hiver</span>
+  <span class="lbl">Out of office · Winter 2026</span>
   <h1>Hiver</h1>
   <div class="row">
    <span class="dates tnum">18.12.2026 — 03.01.2027</span>
@@ -298,64 +338,96 @@ footer .credit{margin-top:80px;padding-top:22px;border-top:1px solid var(--rule)
 
 <section class="note">
  <div class="wrap">
-  <span class="cap">À l'attention de l'équipe</span>
+  <span class="lbl">For the team</span>
   <p>ลาพักร้อนช่วงปลายปีที่ฝรั่งเศสและสวิตเซอร์แลนด์ ตอบข้อความได้ช่วงสั้น ๆ ในวันทำการ และกลับมาทำงานตามปกติวันจันทร์ที่ 4 มกราคม</p>
   <div class="now" role="status"><i aria-hidden="true"></i><span id="now">—</span></div>
  </div>
 </section>
 
-<div class="wrap">
- <div class="status">
-  <div><span class="cap">Away</span><b>9 days</b><span>วันลา (วันทำการ)</span></div>
-  <div><span class="cap">Reachable</span><b class="tnum">13:00–14:30</b><span>เวลาไทย · วันทำการ</span></div>
-  <div><span class="cap">Urgent</span><b>Slack</b><span>เฉพาะเรื่องด่วน</span></div>
-  <div><span class="cap">Return</span><b>Mon 4 Jan</b><span>กลับมาทำงานปกติ</span></div>
- </div>
-</div>
-
-<section class="sec" id="calendrier">
+<!-- ROUTE -->
+<section class="sec" id="route" style="padding-top:40px">
  <div class="wrap">
-  <div class="sh">
-   <div><span class="cap">I · Calendrier</span><h2>The Calendar<small>ปฏิทินช่วงลา · แตะวันที่เพื่อดูว่าอยู่ที่ไหนและติดต่อได้กี่โมง</small></h2></div>
-   <div class="clocks">
-    <div><b class="tnum" id="tBkk">--:--</b><span class="cap">Bangkok</span></div>
-    <div><b class="tnum" id="tEu">--:--</b><span class="cap">Paris · Zürich</span></div>
-   </div>
-  </div>
-  <div class="cal" id="cal" aria-label="ปฏิทิน 14 ธ.ค. 2026 – 10 ม.ค. 2027"></div>
-  <div class="legend">
-   <span><i class="l1"></i>ลาพักร้อน</span>
-   <span><i></i>เสาร์–อาทิตย์</span>
-   <span><i class="l3"></i><em class="it" style="font-size:15px">วันหยุดนักขัตฤกษ์</em></span>
-   <span><i class="l4"></i>กลับมาทำงาน</span>
-  </div>
-  <div class="panel" id="panel" aria-live="polite"></div>
+  <div class="sh"><div><span class="lbl">Route at a glance</span><h2>Bangkok to winter, then home.</h2><p>สองประเทศ สี่เมือง สิบสองคืน บินตรงไปปารีสและบินกลับจากซูริก ระหว่างทางเดินทางด้วยรถไฟทั้งหมด</p></div></div>
+  <div class="line" id="line" aria-hidden="true"></div>
+  <div class="rcards" id="rcards"></div>
  </div>
 </section>
 
-<section class="sec" id="heures">
+<!-- TRAVELLER -->
+<section class="sec" id="traveller">
  <div class="wrap">
-  <div class="sh"><div><span class="cap">II · Heures</span><h2>Hours<small>ช่วงเวลาที่ติดต่อได้ในแต่ละวัน · เวลาประเทศไทย</small></h2></div></div>
+  <div class="trav">
+   <div class="ph"><img src="img/d27.webp" alt="ยอด Jungfrau และหอดู Sphinx" loading="lazy" decoding="async"></div>
+   <div>
+    <span class="lbl">One traveller · one winter route</span>
+    <h2>Solo, by rail.</h2>
+    <p>ทริปเดี่ยวช่วงคริสต์มาส อยู่เมืองละหลายคืนเพื่อเดินเที่ยวแบบไม่เร่ง เช้าวันทำการเปิดดูงานก่อนออกเดินทาง แล้วใช้เวลาที่เหลือกับพิพิธภัณฑ์ ตลาดคริสต์มาส และเทือกเขาแอลป์</p>
+    <div class="tags"><span>Museums</span><span>Christmas markets</span><span>Alpine rail</span><span>Slow mornings</span></div>
+    <div class="traits">
+     <div><span class="lbl">Morning</span><b>07:00–08:30</b><span>ช่วงเช้าที่ยุโรป เปิดดูงานก่อนออกเที่ยว</span></div>
+     <div><span class="lbl">Getting around</span><b>Trains</b><span>TGV · TER · Swiss rail · รถไฟฟันเฟือง</span></div>
+     <div><span class="lbl">Pace</span><b>One area a day</b><span>วันละย่าน พักไม่ต่ำกว่าสองคืนต่อเมือง</span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section class="sec" id="availability">
+ <div class="wrap">
+  <div class="sh">
+   <div><span class="lbl">December 17 – January 4</span><h2>Availability calendar</h2><p>มุมมองสำหรับทีม แสดงวันทำงาน วันลา วันเดินทาง และวันหยุด แตะวันที่เพื่อดูว่าอยู่เมืองไหนและติดต่อได้กี่โมง</p></div>
+   <div class="clocks">
+    <div><b class="tnum" id="tBkk">--:--</b><span class="lbl">Bangkok</span></div>
+    <div><b class="tnum" id="tEu">--:--</b><span class="lbl">Paris · Zürich</span></div>
+   </div>
+  </div>
+  <div class="stats">
+   <div><span class="lbl">Leave</span><b>9 days</b><span>วันลา (วันทำการ) 18–30 ธ.ค.</span></div>
+   <div><span class="lbl">Core local</span><b class="tnum">07:00–08:30</b><span>ช่วงเช้าเวลายุโรป</span></div>
+   <div><span class="lbl">Thailand</span><b class="tnum">13:00–14:30</b><span>วันทำการที่ลา · ตอบช่วงสั้น</span></div>
+   <div><span class="lbl">Back</span><b>Mon 4 Jan</b><span>กลับมาทำงานปกติ</span></div>
+  </div>
+  <div class="legend" style="margin-top:30px">
+   <span><i class="lw"></i>Work day · ทำงานปกติ</span>
+   <span><i class="ll"></i>Leave · ลาพักร้อน</span>
+   <span><i class="lt"></i>Leave + travel · วันเดินทาง</span>
+   <span><i></i>Weekend · เสาร์–อาทิตย์</span>
+   <span><i class="lh"></i>Public holiday · วันหยุด</span>
+   <span><i class="lb"></i>Back · กลับมาทำงาน</span>
+  </div>
+  <div class="cal" id="cal" aria-label="ปฏิทิน 14 ธ.ค. 2026 – 10 ม.ค. 2027"></div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+
+  <div class="sub"><h3>Hours, day by day</h3><p>เวลาประเทศไทย · ยุโรปช้ากว่าไทย 6 ชั่วโมง (08:00 ที่ยุโรป = 14:00 ที่ไทย)</p></div>
   <div class="hrs" id="hrs"></div>
   <div class="hnote">
    <span><i style="background:var(--ink)"></i>ติดต่อได้</span>
-   <span><i style="background:var(--porcelain);border:1px solid var(--rule)"></i>เวลาทำงานที่ออฟฟิศ 09:00–18:00</span>
-   <span>ยุโรปช้ากว่าไทย 6 ชั่วโมง · 08:00 ที่ยุโรป = 14:00 ที่ไทย</span>
+   <span><i style="background:var(--porcelain);border:1px solid var(--rule)"></i>เวลาออฟฟิศ 09:00–18:00</span>
   </div>
  </div>
 </section>
 
-<section class="sec" id="voyage">
+<!-- DAILY PLAN -->
+<section class="sec" id="daily">
  <div class="wrap">
-  <div class="sh"><div><span class="cap">III · Voyage</span><h2>The Journey<small>สี่เมือง สิบสองคืน · เดินทางด้วยรถไฟทั้งหมดในยุโรป</small></h2></div></div>
-  <nav class="route" id="route" aria-label="เมืองในทริป"></nav>
+  <div class="sh"><div><span class="lbl">December 17–31, 2026</span><h2>Daily plan, city by city.</h2><p>แผนรายวันสำหรับแชร์ให้ทีม มีเมือง สิ่งที่จะทำ อุณหภูมิโดยประมาณ และช่วงที่ติดต่อได้ทั้งเวลายุโรปและเวลาไทย</p></div></div>
+  <div class="legend">
+   <span><i class="lw" style="background:var(--ink);border-color:var(--ink)"></i>Work</span>
+   <span><i class="ll"></i>Leave</span>
+   <span><i class="lt"></i>Leave + travel</span>
+   <span><i></i>Weekend / day trip</span>
+   <span><i class="lh"></i>Holiday</span>
+  </div>
  </div>
  <div id="chapters"></div>
 </section>
 
+<!-- WHILE AWAY -->
 <section class="sec" id="absence">
  <div class="wrap">
-  <div class="sh"><div><span class="cap">IV · Absence</span><h2>While I'm Away<small>ระหว่างที่ลา</small></h2></div></div>
+  <div class="sh"><div><span class="lbl">While I'm away</span><h2>How to reach me</h2></div></div>
   <div class="away">
    <div><span class="n">i.</span><h3>เรื่องด่วน</h3><p>ส่งทาง Slack พร้อมสรุปสั้น ๆ ว่าต้องการให้ตัดสินใจหรือช่วยเรื่องอะไร จะตอบในช่วง 13:00–14:30 ของวันทำการ</p></div>
    <div><span class="n">ii.</span><h3>เรื่องไม่ด่วน</h3><p>เก็บไว้คุยหลังวันที่ 4 มกราคม หรือส่งอีเมลไว้ก่อน จะไล่อ่านทั้งหมดในวันแรกที่กลับมา</p></div>
@@ -369,101 +441,104 @@ footer .credit{margin-top:80px;padding-top:22px;border-top:1px solid var(--rule)
  <div class="wrap">
   <div class="w">Merci</div>
   <p>ขอบคุณที่ช่วยดูแลงานระหว่างนี้ · แล้วพบกันเดือนมกราคม</p>
+  <div class="btns"><a href="#top">Back to top</a><a href="#daily">Review daily plan</a></div>
   <div class="credit">Photographs from Wikimedia Commons, used under their Creative Commons licences.</div>
  </div>
 </footer>
 
 <script>
-/* ── data ─────────────────────────────────── */
-const CITY={
- bkk:{en:"Bangkok",th:"กรุงเทพฯ"},
- par:{en:"Paris",th:"ปารีส"},
- stg:{en:"Strasbourg",th:"สตราสบูร์ก"},
- col:{en:"Colmar",th:"โคลมาร์"},
- int:{en:"Interlaken",th:"อินเทอร์ลาเคน"},
- luz:{en:"Lucerne",th:"ลูเซิร์น"}
-};
+const CITY={bkk:{en:"Bangkok",th:"กรุงเทพฯ"},par:{en:"Paris",th:"ปารีส"},stg:{en:"Strasbourg",th:"สตราสบูร์ก"},col:{en:"Colmar",th:"โคลมาร์"},int:{en:"Interlaken",th:"อินเทอร์ลาเคน"},luz:{en:"Lucerne",th:"ลูเซิร์น"}};
+const ROUTE=[
+ {c:"bkk",when:"Dec 17",p:"ทำงานวันสุดท้าย แล้วออกเดินทางคืนนี้",via:"Thai Airways · บินตรงข้ามคืนสู่ปารีส",home:true},
+ {c:"par",when:"Dec 18–22 · 4 nights",p:"พิพิธภัณฑ์ แวร์ซาย นอเทรอดาม และแม่น้ำแซนยามค่ำ",via:"TGV สู่สตราสบูร์ก ราว 2 ชม."},
+ {c:"stg",when:"Dec 22–26 · 4 nights",p:"ตลาดคริสต์มาส มิสซาเที่ยงคืน และวันคริสต์มาสที่โคลมาร์",via:"รถไฟผ่านบาเซิล เข้าสวิส"},
+ {c:"int",when:"Dec 26–28 · 2 nights",p:"เทือกเขา Jungfrau และ Top of Europe 3,454 ม.",via:"Luzern–Interlaken Express"},
+ {c:"luz",when:"Dec 28–30 · 2 nights",p:"ทะเลสาบ สะพานไม้ และยอดเขา Rigi",via:"รถไฟสู่สนามบินซูริก"},
+ {c:"bkk",when:"Dec 30–31",p:"บินกลับจากซูริก ถึงกรุงเทพฯ เช้าวันที่ 31",via:"Thai Airways · บินตรง",home:true}
+];
 const CHAPTERS=[
- {id:"paris",city:"par",n:"I",country:"France",dates:"18 — 22 Dec",nights:"4 nuits",img:"ch-par",alt:"สะพาน Pont Alexandre III ริมแม่น้ำแซน",
+ {id:"paris",city:"par",n:"I",country:"France",dates:"Dec 18 – 22",nights:"4 nights",img:"ch-par",alt:"สะพาน Pont Alexandre III ริมแม่น้ำแซน",temp:"1–8°C",light:"08:40–16:55",
   intro:"ปารีสในเดือนธันวาคม พิพิธภัณฑ์ใหญ่ พระราชวังแวร์ซาย มหาวิหารนอเทรอดามหลังการบูรณะ และแม่น้ำแซนยามค่ำ เดินช้า ๆ วันละย่าน",
   days:["2026-12-18","2026-12-19","2026-12-20","2026-12-21"]},
- {id:"strasbourg",city:"stg",n:"II",country:"France · Alsace",dates:"22 — 26 Dec",nights:"4 nuits",img:"ch-stg",alt:"บ้านไม้ริมคลองย่าน Petite France เมืองสตราสบูร์ก",
+ {id:"strasbourg",city:"stg",n:"II",country:"France · Alsace",dates:"Dec 22 – 26",nights:"4 nights",img:"ch-stg",alt:"บ้านไม้ริมคลองย่าน Petite France เมืองสตราสบูร์ก",temp:"−3–5°C",light:"08:15–16:40",
   intro:"เมืองหลวงแห่งคริสต์มาสของฝรั่งเศส ตลาดคริสต์มาสที่เก่าแก่ที่สุดในประเทศ มิสซาเที่ยงคืนในมหาวิหาร และวันคริสต์มาสที่โคลมาร์",
   days:["2026-12-22","2026-12-23","2026-12-24","2026-12-25"]},
- {id:"interlaken",city:"int",n:"III",country:"Switzerland",dates:"26 — 28 Dec",nights:"2 nuits",img:"ch-int",alt:"เมืองอินเทอร์ลาเคนระหว่างทะเลสาบสองแห่ง",
+ {id:"interlaken",city:"int",n:"III",country:"Switzerland",dates:"Dec 26 – 28",nights:"2 nights",img:"ch-int",alt:"เมืองอินเทอร์ลาเคนระหว่างทะเลสาบสองแห่ง",temp:"−5–3°C · ยอดเขา −15°C",light:"08:10–16:45",
   intro:"เมืองเล็กระหว่างทะเลสาบสองแห่ง ประตูสู่เทือกเขา Jungfrau และสถานีรถไฟที่สูงที่สุดในยุโรป",
   days:["2026-12-26","2026-12-27"]},
- {id:"lucerne",city:"luz",n:"IV",country:"Switzerland",dates:"28 — 30 Dec",nights:"2 nuits",img:"ch-luz",alt:"สะพานไม้ Kapellbrücke เมืองลูเซิร์น",
+ {id:"lucerne",city:"luz",n:"IV",country:"Switzerland",dates:"Dec 28 – 30",nights:"2 nights",img:"ch-luz",alt:"สะพานไม้ Kapellbrücke เมืองลูเซิร์น",temp:"−4–4°C",light:"08:10–16:45",
   intro:"เมืองริมทะเลสาบ สะพานไม้ที่เก่าแก่ที่สุดในยุโรป และยอดเขา Rigi เหนือทะเลหมอก ก่อนบินกลับจากซูริก",
   days:["2026-12-28","2026-12-29","2026-12-30"]}
 ];
-/* reachable windows are in THAI time (decimal hours) */
+/* type: work|leave|travel|off|hol ; th = reachable windows in THAI time (decimal hours) */
 const DAY={
- "2026-12-17":{city:"bkk",th:[[9,18]],st:"ทำงานปกติ",title:"วันทำงานสุดท้าย",en:"Départ",plain:"ทำงานตามปกติทั้งวัน และออกเดินทางคืนนี้"},
- "2026-12-18":{city:"par",th:[[18,21]],st:"วันเดินทาง",sub:"เฉพาะเรื่องด่วน",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel",
-  items:[["Rive Gauche","วันแรกเดินเล่นช้า ๆ ปรับเวลาให้เข้ากับยุโรป"],["Trocadéro","หอไอเฟลเปิดไฟระยิบทุกต้นชั่วโมงหลังพระอาทิตย์ตก"]]},
- "2026-12-19":{city:"par",th:[],st:"วันหยุด",title:"ลูฟวร์และตลาดคริสต์มาส",en:"Le Louvre & les Tuileries",img:"d19",cap:"Musée du Louvre",
+ "2026-12-17":{city:"bkk",type:"work",tl:"Work · night flight",temp:"25–33°C",th:[[9,18]],st:"ทำงานปกติ",title:"วันทำงานสุดท้าย",en:"Departure",lede:"ทำงานตามปกติทั้งวัน แล้วไปสนามบินสุวรรณภูมิช่วงค่ำ บินข้ามคืนสู่ปารีส"},
+ "2026-12-18":{city:"par",type:"travel",tl:"Leave + arrival",temp:"2–8°C",th:[[18,21]],st:"วันเดินทาง",sub:"เฉพาะเรื่องด่วน",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel",lede:"ลงเครื่องเช้าตรู่ เข้าเมือง แล้วใช้วันแรกปรับเวลา ไม่วางแผนหนัก",
+  items:[["Rive Gauche","เดินเล่นฝั่งซ้ายแม่น้ำแซน หาคาเฟ่และมื้อแรก"],["Trocadéro","ชมหอไอเฟลเปิดไฟระยิบทุกต้นชั่วโมงหลังพระอาทิตย์ตก"]]},
+ "2026-12-19":{city:"par",type:"off",tl:"Weekend",temp:"2–8°C",th:[],st:"วันหยุด",title:"ลูฟวร์และตลาดคริสต์มาส",en:"Le Louvre & les Tuileries",img:"d19",cap:"Musée du Louvre",lede:"วันพิพิธภัณฑ์เต็มวัน ต่อด้วยไฟคริสต์มาสย่าน Opéra",
   items:[["Musée du Louvre","พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก"],["Jardin des Tuileries","ตลาดคริสต์มาสในสวนหน้าลูฟวร์"],["Galeries Lafayette","ต้นคริสต์มาสยักษ์ใต้โดมกระจก และดาดฟ้าชมเมือง"],["Champs-Élysées","ถนนประดับไฟคริสต์มาสยามค่ำ"]]},
- "2026-12-20":{city:"par",th:[],st:"วันหยุด",title:"พระราชวังแวร์ซาย",en:"Château de Versailles",img:"d20",cap:"Galerie des Glaces, Versailles",
+ "2026-12-20":{city:"par",type:"off",tl:"Weekend · day trip",temp:"1–7°C",th:[],st:"วันหยุด",title:"พระราชวังแวร์ซาย",en:"Château de Versailles",img:"d20",cap:"Galerie des Glaces, Versailles",lede:"นั่งรถไฟชานเมืองราวหนึ่งชั่วโมง ใช้เวลาที่แวร์ซายทั้งวัน",
   items:[["Galerie des Glaces","ท้องพระโรงกระจกและห้องบรรทมของกษัตริย์"],["Trianon & Hameau de la Reine","ตำหนักและหมู่บ้านของพระนางมารี อองตัวเนต"],["Jardins de Versailles","สวนฝรั่งเศสในฤดูหนาว"]]},
- "2026-12-21":{city:"par",th:[[13,14.5]],st:"ลา · ตอบช่วงสั้น",title:"เกาะกลางแม่น้ำแซน",en:"Île de la Cité",img:"d21",cap:"Sainte-Chapelle",
-  items:[["Notre-Dame de Paris","มหาวิหารที่เพิ่งกลับมาเปิดหลังการบูรณะ"],["Sainte-Chapelle","หน้าต่างกระจกสีจากศตวรรษที่ 13"],["Conciergerie","พระราชวังยุคกลางริมแม่น้ำ"],["Shakespeare and Company","ร้านหนังสือในย่านละติน"],["Croisière sur la Seine","ล่องเรือแม่น้ำแซนยามค่ำ"]]},
- "2026-12-22":{city:"stg",th:[[13.5,14.75],[20,21.75]],st:"ลา · ตอบช่วงสั้น",title:"จากปารีสสู่อัลซาส",en:"Vers Strasbourg",img:"d22",cap:"Musée d'Orsay",
+ "2026-12-21":{city:"par",type:"leave",tl:"Leave",temp:"2–8°C",th:[[13,14.5]],st:"ลา · ตอบช่วงสั้น",title:"เกาะกลางแม่น้ำแซน",en:"Île de la Cité",img:"d21",cap:"Sainte-Chapelle",lede:"เช้าเปิดดูงานช่วงสั้น แล้วเดินย่านเกาะกลางเมืองกับย่านละติน",
+  items:[["Notre-Dame de Paris","มหาวิหารที่กลับมาเปิดหลังการบูรณะ"],["Sainte-Chapelle","หน้าต่างกระจกสีจากศตวรรษที่ 13"],["Conciergerie","พระราชวังยุคกลางริมแม่น้ำ"],["Shakespeare and Company","ร้านหนังสือในย่านละติน"],["Croisière sur la Seine","ล่องเรือแม่น้ำแซนยามค่ำ"]]},
+ "2026-12-22":{city:"stg",type:"travel",tl:"Leave + travel",temp:"−2–5°C",th:[[13.5,14.75],[20,21.75]],st:"วันเดินทาง",sub:"ตอบได้ตอนเช้าและบนรถไฟ",title:"จากปารีสสู่อัลซาส",en:"Vers Strasbourg",img:"d22",cap:"Musée d'Orsay",lede:"เช้าที่ Musée d'Orsay บ่ายนั่ง TGV ไปสตราสบูร์ก คืนแรกที่ตลาดคริสต์มาส",
   items:[["Musée d'Orsay","ผลงานอิมเพรสชันนิสม์ในสถานีรถไฟเก่า"],["TGV","รถไฟความเร็วสูงสู่สตราสบูร์กราวสองชั่วโมง"],["La Petite France","ย่านบ้านไม้ริมคลอง"],["Place Kléber","ต้นคริสต์มาสยักษ์กลางเมือง"]]},
- "2026-12-23":{city:"stg",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"มหาวิหารสีกุหลาบ",en:"La Cathédrale",img:"d23",cap:"Cathédrale de Strasbourg",
-  items:[["Cathédrale Notre-Dame","มหาวิหารกอทิกจากหินทรายสีชมพู"],["Horloge astronomique","นาฬิกาดาราศาสตร์ ขบวนอัครสาวกออกมาวันละรอบ"],["Batorama","ล่องเรือรอบเกาะ Grande Île มรดกโลก"],["Christkindelsmärik","ตลาดคริสต์มาสที่เก่าแก่ที่สุดในฝรั่งเศส"]]},
- "2026-12-24":{city:"stg",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"คืนคริสต์มาสอีฟ",en:"Le Réveillon",img:"d24",cap:"Marché de Noël, Strasbourg",
+ "2026-12-23":{city:"stg",type:"leave",tl:"Leave",temp:"−2–5°C",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"มหาวิหารสีกุหลาบ",en:"La Cathédrale",img:"d23",cap:"Cathédrale de Strasbourg",lede:"เมืองเก่าบนเกาะ Grande Île ซึ่งเป็นมรดกโลก",
+  items:[["Cathédrale Notre-Dame","มหาวิหารกอทิกจากหินทรายสีชมพู"],["Horloge astronomique","นาฬิกาดาราศาสตร์ ขบวนอัครสาวกออกมาวันละรอบ"],["Batorama","ล่องเรือรอบเกาะ Grande Île"],["Christkindelsmärik","ตลาดคริสต์มาสที่เก่าแก่ที่สุดในฝรั่งเศส"]]},
+ "2026-12-24":{city:"stg",type:"leave",tl:"Leave · Christmas Eve",temp:"−2–5°C",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"คืนคริสต์มาสอีฟ",en:"Le Réveillon",img:"d24",cap:"Marché de Noël, Strasbourg",lede:"วันสุดท้ายของตลาดคริสต์มาส ร้านค้าส่วนใหญ่ปิดวันที่ 25–26",
   items:[["Neustadt","ย่านเมืองใหม่สมัยจักรวรรดิเยอรมัน มรดกโลก"],["Marché de Noël","ตลาดคริสต์มาสวันสุดท้ายของปี"],["Messe de minuit","มิสซาเที่ยงคืนในมหาวิหาร"]]},
- "2026-12-25":{city:"col",th:[[14,15]],st:"วันคริสต์มาส",sub:"เฉพาะเรื่องด่วน",title:"วันคริสต์มาสที่โคลมาร์",en:"Noël à Colmar",img:"d25",cap:"Petite Venise, Colmar",
+ "2026-12-25":{city:"col",type:"leave",tl:"Leave · Christmas day trip",temp:"−3–5°C",th:[[14,15]],st:"วันคริสต์มาส",sub:"เฉพาะเรื่องด่วน",title:"วันคริสต์มาสที่โคลมาร์",en:"Noël à Colmar",img:"d25",cap:"Petite Venise, Colmar",lede:"รถไฟภูมิภาคราวครึ่งชั่วโมงไปเมืองเทพนิยายแห่งอัลซาส กลับสตราสบูร์กตอนค่ำ",
   items:[["Place des Dominicains","ตลาดงานฝีมือหน้าโบสถ์เก่า"],["Petite Venise","คลองและบ้านไม้หลากสี"],["Place Rapp","ไฟประดับ ชิงช้าสวรรค์ และลานสเก็ต"]]},
- "2026-12-26":{city:"int",th:[],st:"วันหยุด",title:"สู่เทือกเขาแอลป์",en:"Vers les Alpes",img:"d26",cap:"Eiger",
-  items:[["Basel","ข้ามพรมแดนเข้าสวิตเซอร์แลนด์ด้วยรถไฟ"],["Interlaken","เมืองระหว่างทะเลสาบ Thun และ Brienz"],["Höheweg","ถนนเลียบทุ่งหญ้า มองเห็นยอด Jungfrau"]]},
- "2026-12-27":{city:"int",th:[],st:"วันหยุด",title:"หลังคาแห่งยุโรป",en:"Jungfraujoch",img:"d27",cap:"Sphinx, Jungfraujoch",
+ "2026-12-26":{city:"int",type:"off",tl:"Weekend + travel",temp:"−5–3°C",th:[],st:"วันหยุด",title:"สู่เทือกเขาแอลป์",en:"Vers les Alpes",img:"d26",cap:"Eiger",lede:"นั่งรถไฟข้ามพรมแดนผ่านบาเซิล ถึงอินเทอร์ลาเคนช่วงบ่าย",
+  items:[["Basel","เปลี่ยนรถไฟเข้าสวิตเซอร์แลนด์"],["Interlaken","เมืองระหว่างทะเลสาบ Thun และ Brienz"],["Höheweg","ถนนเลียบทุ่งหญ้า มองเห็นยอด Jungfrau"]]},
+ "2026-12-27":{city:"int",type:"off",tl:"Weekend · mountain",temp:"−15 – −9°C ยอดเขา",th:[],st:"วันหยุด",title:"หลังคาแห่งยุโรป",en:"Jungfraujoch",img:"d27",cap:"Sphinx, Jungfraujoch",lede:"ขึ้นเขาแต่เช้า ถ้าอากาศปิดจะสลับเป็นวันในเมือง",
   items:[["Eiger Express","กระเช้าขึ้นเขาผ่านหน้าผาเหนือของ Eiger"],["Jungfraubahn","รถไฟลอดภูเขาสู่ระดับ 3,454 เมตร"],["Sphinx · Ice Palace","จุดชมธารน้ำแข็ง Aletsch ที่ยาวที่สุดในเทือกเขาแอลป์"]]},
- "2026-12-28":{city:"luz",th:[[13.5,15.5],[16,18]],st:"ลา · ตอบช่วงสั้น",title:"เมืองริมทะเลสาบ",en:"Lucerne",img:"d28",cap:"Löwendenkmal",
+ "2026-12-28":{city:"luz",type:"travel",tl:"Leave + travel",temp:"−2–4°C",th:[[13.5,15.5],[16,18]],st:"วันเดินทาง",sub:"ตอบได้ตอนเช้าและบนรถไฟ",title:"เมืองริมทะเลสาบ",en:"Lucerne",img:"d28",cap:"Löwendenkmal",lede:"รถไฟชมวิวผ่านช่องเขา ถึงลูเซิร์นเที่ยง บ่ายเดินเมืองเก่า",
   items:[["Luzern–Interlaken Express","เส้นทางรถไฟผ่านทะเลสาบและช่องเขา Brünig"],["Kapellbrücke","สะพานไม้มีหลังคาที่เก่าแก่ที่สุดในยุโรป"],["Löwendenkmal","อนุสาวรีย์สิงโตแกะสลักในหน้าผา"]]},
- "2026-12-29":{city:"luz",th:[[13,14.25]],st:"ลา · ตอบช่วงสั้น",title:"ราชินีแห่งขุนเขา",en:"Rigi",img:"d29",cap:"Rigi Kulm",
+ "2026-12-29":{city:"luz",type:"leave",tl:"Leave · day trip",temp:"−4–2°C ยอดเขา",th:[[13,14.25]],st:"ลา · ตอบช่วงสั้น",title:"ราชินีแห่งขุนเขา",en:"Rigi",img:"d29",cap:"Rigi Kulm",lede:"เช้าเปิดดูงานก่อนออก แล้วขึ้นเขา Rigi ด้วยรถไฟฟันเฟือง",
   items:[["Rigi Bahn","รถไฟฟันเฟืองสายแรกของยุโรป"],["Rigi Kulm","ยอดเขา 1,798 เมตร มองเห็นทะเลหมอกและทะเลสาบรอบด้าน"]]},
- "2026-12-30":{city:"luz",th:[[14.5,15.75]],st:"วันเดินทางกลับ",sub:"เฉพาะเรื่องด่วน",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee",
+ "2026-12-30":{city:"luz",type:"travel",tl:"Leave + flight",temp:"−2–4°C",th:[[14.5,15.75]],st:"วันเดินทางกลับ",sub:"เฉพาะเรื่องด่วน",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee",lede:"รถไฟเช้าไปสนามบินซูริก บินกลับกรุงเทพฯ ช่วงบ่าย",
   items:[["Lake Lucerne","เดินเล่นริมทะเลสาบก่อนออกเดินทาง"],["Zürich","รถไฟสู่สนามบินและบินกลับกรุงเทพฯ"]]},
- "2026-12-31":{city:"bkk",th:[],st:"วันสิ้นปี",title:"ถึงกรุงเทพฯ",en:"Retour",plain:"ถึงกรุงเทพฯ ช่วงเช้า พักวันหยุดปีใหม่ถึงวันที่ 3 มกราคม"}
+ "2026-12-31":{city:"bkk",type:"hol",tl:"Holiday · arrival",temp:"25–33°C",th:[],st:"วันสิ้นปี",title:"ถึงกรุงเทพฯ",en:"Home",lede:"ถึงกรุงเทพฯ ช่วงเช้า พักวันหยุดปีใหม่ถึงวันที่ 3 มกราคม กลับมาทำงานวันจันทร์ที่ 4"}
 };
 
-/* ── helpers ──────────────────────────────── */
 const $=s=>document.querySelector(s);
 const p2=n=>String(n).padStart(2,"0");
-const hm=h=>{const H=Math.floor(h),M=Math.round((h-H)*60);return p2(H)+":"+p2(M);};
+const hm=h=>{h=(h+24)%24;const H=Math.floor(h),M=Math.round((h-H)*60);return p2(H)+":"+p2(M);};
 const win=a=>a.map(([s,e])=>`${hm(s)}–${hm(e)}`).join(" · ");
 const winEu=a=>a.map(([s,e])=>`${hm(s-6)}–${hm(e-6)}`).join(" · ");
 const MON=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
 const MEN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const WD=["อาทิตย์","จันทร์","อังคาร","พุธ","พฤหัสบดี","ศุกร์","เสาร์"];
-const WFR=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
 const WEN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const ROM=["i","ii","iii","iv","v","vi"];
 const keyOf=d=>`${d.getFullYear()}-${p2(d.getMonth()+1)}-${p2(d.getDate())}`;
 const parse=k=>{const [y,m,d]=k.split("-").map(Number);return new Date(y,m-1,d);};
-const bkkToday=()=>{const s=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Bangkok",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());return parse(s);};
+const bkkToday=()=>parse(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Bangkok",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()));
 
 function info(dt){
- const k=keyOf(dt),y=dt.getFullYear(),m=dt.getMonth(),d=dt.getDate(),dow=dt.getDay(),we=dow===0||dow===6;
+ const k=keyOf(dt),y=dt.getFullYear(),m=dt.getMonth(),d=dt.getDate(),dow=dt.getDay(),we=dow===0||dow===6,D=DAY[k];
  let cls="work",s="ทำงาน";
  if(k==="2026-12-31"||k==="2027-01-01"){cls="hol";s=d===31?"วันสิ้นปี":"ปีใหม่";}
- else if(y===2026&&m===11&&d>=18&&d<=30){cls=we?"off":"leave";s=we?"วันหยุด":"ลาพักร้อน";}
+ else if(y===2026&&m===11&&d>=18&&d<=30){cls=we?"off":(D&&D.type==="travel"?"travel":"leave");s=we?"วันหยุด":(cls==="travel"?"เดินทาง":"ลาพักร้อน");}
  else if(we){cls="off";s="วันหยุด";}
  if(k==="2027-01-04"){cls="back";s="กลับมาทำงาน";}
- return {k,y,m,d,dow,cls,s,D:DAY[k],inRange:dt>=new Date(2026,11,17)&&dt<=new Date(2027,0,4)};
+ return {k,y,m,d,dow,cls,s,D,inRange:dt>=new Date(2026,11,17)&&dt<=new Date(2027,0,4)};
 }
 
-/* ── calendar ─────────────────────────────── */
+/* route */
+$("#line").innerHTML=ROUTE.map((r,i)=>`<div class="stop${r.home?" home":""}"><i>${i+1}</i><span>${CITY[r.c].en}</span></div>`).join("");
+$("#rcards").innerHTML=ROUTE.map(r=>`<div class="rc"><span class="when">${r.when}</span><b>${CITY[r.c].en}</b><p>${r.p}</p><span class="via">${r.via}</span></div>`).join("");
+
+/* calendar */
 function buildCal(){
  const today=keyOf(bkkToday()),start=new Date(2026,11,14);
- let h=["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"].map(x=>`<div class="dow cap" aria-hidden="true">${x}</div>`).join("");
+ let h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(x=>`<div class="dow lbl" aria-hidden="true">${x}</div>`).join("");
  for(let i=0;i<28;i++){
   const dt=new Date(start);dt.setDate(start.getDate()+i);
   const I=info(dt),city=I.D&&I.D.city!=="bkk"?CITY[I.D.city].en:"";
   const mo=(I.d===1||i===0)?`<span class="mo">${MEN[I.m]}</span>`:"";
-  h+=`<button class="cell ${I.cls}${I.inRange?"":" dim"}" data-k="${I.k}" aria-pressed="false" aria-label="${WD[I.dow]} ${I.d} ${MON[I.m]} · ${I.s}${city?" · "+city:""}">${I.k===today?'<span class="td">today</span>':""}<span><span class="d tnum">${I.d}</span>${mo}</span><span class="c">${city}</span><span class="s">${I.s}</span></button>`;
+  h+=`<button class="cell ${I.cls}${I.inRange?"":" dim"}" data-k="${I.k}" aria-pressed="false" aria-label="${WD[I.dow]} ${I.d} ${MON[I.m]} · ${I.s}${city?" · "+city:""}">${I.k===today?'<span class="td">Today</span>':""}<span><span class="d tnum">${I.d}</span>${mo}</span><span class="c">${city}</span><span class="s">${I.s}</span></button>`;
  }
  $("#cal").innerHTML=h;
  $("#cal").addEventListener("click",e=>{const b=e.target.closest(".cell");if(b)show(b.dataset.k);});
@@ -471,61 +546,60 @@ function buildCal(){
 function show(k){
  document.querySelectorAll(".cell").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===k?"true":"false"));
  const I=info(parse(k)),D=I.D;
- let where,reach,eu="";
- if(D) where=`<h3>${CITY[D.city].en}</h3><p>${CITY[D.city].th}${D.title?` · ${D.title}`:""}</p>`;
- else if(I.cls==="work"||I.cls==="back") where=`<h3>Bureau</h3><p>ทำงานที่ออฟฟิศตามปกติ</p>`;
+ let where,reach;
+ if(D) where=`<h3>${CITY[D.city].en}</h3><p>${CITY[D.city].th} · ${D.title}</p>`;
+ else if(I.cls==="work"||I.cls==="back") where=`<h3>Office</h3><p>ทำงานที่ออฟฟิศตามปกติ</p>`;
  else where=`<h3>Bangkok</h3><p>กรุงเทพฯ · วันหยุด</p>`;
- if(D&&D.th.length){reach=`<h3 class="tnum">${win(D.th)}</h3><p>เวลาไทย${D.city!=="bkk"?` · ${winEu(D.th)} เวลายุโรป`:""}</p>`;}
+ if(D&&D.th.length) reach=`<h3 class="tnum">${win(D.th)}</h3><p>เวลาไทย${D.city!=="bkk"?` · ${winEu(D.th)} เวลายุโรป`:""}</p>`;
  else if(I.cls==="work"||I.cls==="back") reach=`<h3 class="th">เวลาทำงานปกติ</h3><p>09:00–18:00</p>`;
  else reach=`<h3 class="th">ไม่ได้เช็คข้อความ</h3><p>เรื่องด่วนส่ง Slack ไว้ จะตอบในวันทำการถัดไป</p>`;
- const status=D?D.st+(D.sub?` · ${D.sub}`:""):I.s;
  $("#panel").innerHTML=`
-  <div><span class="cap">${WFR[I.dow]} · ${I.d} ${MEN[I.m]} ${I.y}</span><h3 class="th">${WD[I.dow]} ${I.d} ${MON[I.m]}</h3><p>${status}</p></div>
-  <div><span class="cap">Location</span>${where}</div>
-  <div><span class="cap">Reachable</span>${reach}</div>`;
+  <div><span class="lbl">${WEN[I.dow]} · ${MEN[I.m]} ${I.d}, ${I.y}</span><h3 class="th">${WD[I.dow]} ${I.d} ${MON[I.m]}</h3><p>${D?D.st+(D.sub?` · ${D.sub}`:""):I.s}</p></div>
+  <div><span class="lbl">Location</span>${where}</div>
+  <div><span class="lbl">Reachable</span>${reach}</div>`;
 }
 
-/* ── hours ────────────────────────────────── */
+/* hours */
 function buildHours(){
  const pct=h=>(h/24*100).toFixed(3)+"%";
  const office=`<span class="office" style="left:${pct(9)};width:${pct(9)}"></span>`;
- let h=`<div class="hh"><span class="cap">Date</span><span class="cap">City</span><span class="cap h3">Status</span><div class="scale">${[0,6,12,18,24].map(x=>`<span style="left:${pct(x)}">${p2(x)}:00</span>`).join("")}</div></div>`;
+ let h=`<div class="hh"><span class="lbl">Date</span><span class="lbl">City</span><span class="lbl h3">Status</span><div class="scale">${[0,6,12,18,24].map(x=>`<span style="left:${pct(x)}">${p2(x)}:00</span>`).join("")}</div></div>`;
  for(const [k,D] of Object.entries(DAY)){
-  const dt=parse(k),off=!D.th.length;
+  const dt=parse(k),off=!D.th.length,f=off?0:D.th[0][0];
   const segs=D.th.map(([s,e])=>`<span class="seg" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("");
-  const f=off?0:D.th[0][0];
   const lab=off?`<span class="lab m" style="left:0">ไม่ได้เช็คข้อความ</span>`:`<span class="lab tnum" style="left:${pct(f)}${f>14?";transform:translateX(-35%)":""}">${win(D.th)}</span>`;
-  h+=`<div class="hr${off?" off":""}"><div class="dt"><b class="tnum">${dt.getDate()}</b><span class="cap">${WEN[dt.getDay()]} · ${MEN[dt.getMonth()]}</span></div><div class="ct">${CITY[D.city].en}</div><div class="st">${D.st}${D.sub?`<small>${D.sub}</small>`:""}</div><div class="track" role="img" aria-label="${off?"ไม่ได้เช็คข้อความ":"ติดต่อได้ "+win(D.th)+" เวลาไทย"}">${office}${segs}${lab}</div></div>`;
+  h+=`<div class="hr${off?" off":""}"><div class="dt"><b class="tnum">${dt.getDate()}</b><span class="lbl">${WEN[dt.getDay()]} · ${MEN[dt.getMonth()]}</span></div><div class="ct">${CITY[D.city].en}</div><div class="st">${D.st}${D.sub?`<small>${D.sub}</small>`:""}</div><div class="track" role="img" aria-label="${off?"ไม่ได้เช็คข้อความ":"ติดต่อได้ "+win(D.th)+" เวลาไทย"}">${office}${segs}${lab}</div></div>`;
  }
  $("#hrs").innerHTML=h;
 }
 
-/* ── journey ──────────────────────────────── */
+/* daily plan */
+function availHTML(D){
+ if(D.type==="work") return `<div class="avail"><div><span class="lbl">Team</span><b>ทำงานปกติ</b></div><div><span class="lbl">Bangkok</span><b class="tnum">09:00–18:00</b></div><div><span class="lbl">Evening</span><b>บินคืนนี้</b></div></div>`;
+ if(!D.th.length) return `<div class="avail"><div><span class="lbl">Team</span><b class="no">${D.type==="hol"?"วันหยุด":"ไม่ได้เช็คข้อความ"}</b></div><div><span class="lbl">Local</span><b class="no">—</b></div><div><span class="lbl">Thailand</span><b class="no">—</b></div></div>`;
+ return `<div class="avail"><div><span class="lbl">Team</span><b>${D.sub||"ตอบช่วงสั้น"}</b></div><div><span class="lbl">Local</span><b class="tnum">${winEu(D.th)}</b></div><div><span class="lbl">Thailand</span><b class="tnum">${win(D.th)}</b></div></div>`;
+}
 function dayHTML(k){
  const D=DAY[k],dt=parse(k),dow=dt.getDay();
- const dn=`<div class="dn"><b class="tnum">${dt.getDate()}</b><span class="cap wd">${WFR[dow]} · ${MEN[dt.getMonth()]}</span><span class="th">${WD[dow]} ${dt.getDate()} ${MON[dt.getMonth()]}</span></div>`;
- const reach=D.th.length?`<div class="reach"><span class="cap">Reachable</span><strong class="tnum">${win(D.th)}</strong><em>เวลาไทย</em></div>`:`<div class="reach"><span class="cap">Reachable</span><em>ไม่ได้เช็คข้อความ</em></div>`;
- if(D.plain) return `<article class="day plain">${dn}<div><h3>${D.title}<span class="en">${D.en}</span></h3><p style="margin-top:14px;color:var(--graphite)">${D.plain}</p>${reach}</div></article>`;
- return `<article class="day">${dn}
-  <div><h3>${D.title}<span class="en">${D.en}</span></h3>
-   <ul>${D.items.map(([t,n],i)=>`<li><span class="k">${ROM[i]}.</span><div><b>${t}</b><span>${n}</span></div></li>`).join("")}</ul>${reach}</div>
-  <figure><div class="ph"><img src="img/${D.img}.webp" alt="${D.cap}" loading="lazy" decoding="async"></div><figcaption>${D.cap}</figcaption></figure>
- </article>`;
+ const dn=`<div class="dn"><b class="tnum">${dt.getDate()}</b><span class="wd">${WEN[dow]} · ${MEN[dt.getMonth()]}</span><span class="temp">${D.temp}</span></div>`;
+ const head=`<span class="type ${D.type==="travel"?"leave":D.type}">${D.tl}</span><h3>${D.title}<span class="en">${D.en}</span></h3><p class="lede">${D.lede}</p>`;
+ if(!D.items) return `<article class="day plain">${dn}<div>${head}${availHTML(D)}</div></article>`;
+ return `<article class="day">${dn}<div>${head}<ul>${D.items.map(([t,n],i)=>`<li><span class="k">${ROM[i]}.</span><div><b>${t}</b><span>${n}</span></div></li>`).join("")}</ul>${availHTML(D)}</div><figure><div class="ph"><img src="img/${D.img}.webp" alt="${D.cap}" loading="lazy" decoding="async"></div><figcaption>${D.cap}</figcaption></figure></article>`;
 }
-function buildJourney(){
- $("#route").innerHTML=CHAPTERS.map(c=>`<a href="#${c.id}"><span class="n">${c.n}.</span><b>${CITY[c.city].en}</b><span>${c.dates} · ${c.nights}</span></a>`).join("");
- const first=`<div class="wrap" style="padding-top:70px">${dayHTML("2026-12-17")}</div>`;
- $("#chapters").innerHTML=first+CHAPTERS.map(c=>`
+function buildDaily(){
+ $("#chapters").innerHTML=`<div class="wrap days" style="padding-top:44px">${dayHTML("2026-12-17")}</div>`+CHAPTERS.map(c=>`
   <section class="chap" id="${c.id}">
    <div class="chero"><img src="img/${c.img}.webp" alt="${c.alt}" loading="lazy" decoding="async">
-    <div class="t"><div class="wrap"><span class="cap">Chapitre ${c.n} · ${c.country}</span><h2>${CITY[c.city].en}</h2>
-     <div class="meta"><span>${c.dates} · ${c.nights}</span><em>${CITY[c.city].th}</em></div></div></div>
+    <div class="t"><div class="wrap"><span class="lbl">Chapter ${c.n} · ${c.country}</span><h2>${CITY[c.city].en}</h2>
+     <div class="meta"><span>${c.dates} · ${c.nights}</span><span>${CITY[c.city].th}</span></div></div></div>
    </div>
-   <div class="wrap"><div class="intro"><p>${c.intro}</p></div>${c.days.map(dayHTML).join("")}</div>
-  </section>`).join("")+`<div class="wrap" style="padding-top:70px">${dayHTML("2026-12-31")}</div>`;
+   <div class="wrap"><div class="intro"><p>${c.intro}</p></div>
+    <div class="cityfacts"><span>อุณหภูมิ <b>${c.temp}</b></span><span>กลางวัน <b>${c.light}</b></span><span>เวลา <b>ไทย −6 ชม.</b></span></div>
+    <div class="days">${c.days.map(dayHTML).join("")}</div></div>
+  </section>`).join("")+`<div class="wrap days" style="padding-top:70px">${dayHTML("2026-12-31")}</div>`;
 }
 
-/* ── live status, clocks, nav ─────────────── */
+/* live status, clocks, nav */
 function status(){
  const t=bkkToday(),k=keyOf(t),start=new Date(2026,11,18),back=new Date(2027,0,4);
  let s;
@@ -537,12 +611,12 @@ function status(){
 const fmt=tz=>new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date());
 function tick(){$("#tBkk").textContent=fmt("Asia/Bangkok");$("#tEu").textContent=fmt("Europe/Paris");}
 
-buildCal();buildHours();buildJourney();status();tick();setInterval(tick,15000);
+buildCal();buildHours();buildDaily();status();tick();setInterval(tick,15000);
 {const tk=keyOf(bkkToday());show(DAY[tk]||tk==="2027-01-04"?tk:"2026-12-18");}
 
 const links=[...document.querySelectorAll(".mast nav a")];
 const navIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id));}),{rootMargin:"-40% 0px -55% 0px"});
-["calendrier","heures","voyage","absence"].forEach(id=>navIO.observe(document.getElementById(id)));
+["route","traveller","availability","daily","absence"].forEach(id=>navIO.observe(document.getElementById(id)));
 const heroIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");heroIO.unobserve(e.target);}}),{threshold:.2});
 document.querySelectorAll(".chero").forEach(el=>heroIO.observe(el));
 </script>
