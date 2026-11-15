@@ -55,6 +55,13 @@ a{color:inherit;-webkit-tap-highlight-color:transparent}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1240px;margin:0 auto;padding-left:var(--pad);padding-right:var(--padr)}
+.flag{display:inline-block;width:15px;height:10px;margin-right:7px;vertical-align:-1px;border-radius:1.5px;background:center/cover no-repeat;box-shadow:0 0 0 .5px rgba(18,18,18,.22)}
+.flag.ch{width:10px}
+.nw{white-space:nowrap}
+.flag.fr{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Cpath fill='%23002654' d='M0 0h1v2H0z'/%3E%3Cpath fill='%23fff' d='M1 0h1v2H1z'/%3E%3Cpath fill='%23CE1126' d='M2 0h1v2H2z'/%3E%3C/svg%3E")}
+.flag.ch{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23DA291C' d='M0 0h32v32H0z'/%3E%3Cpath fill='%23fff' d='M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z'/%3E%3C/svg%3E")}
+.flag.th{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Cpath fill='%23A51931' d='M0 0h9v6H0z'/%3E%3Cpath fill='%23F4F5F8' d='M0 1h9v4H0z'/%3E%3Cpath fill='%232D2A4A' d='M0 2h9v2H0z'/%3E%3C/svg%3E")}
+.t .flag{box-shadow:0 0 0 .5px rgba(255,255,255,.55)}
 .lbl{font:500 11.5px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
 .lbl.m{color:var(--mute)}
 .tnum{font-variant-numeric:lining-nums tabular-nums}
@@ -574,7 +581,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
   <div class="sh"><span class="lbl m">Softever Around The World 2026</span><h2>The trip, at a glance.</h2><p>สรุปตามหัวข้อแผนการท่องเที่ยวของสวัสดิการ วันเดินทาง ประเทศและเมือง ผู้ติดตาม และวันหยุดที่ใช้</p></div>
   <div class="prog">
    <div><span class="lbl m">Travel dates</span><b>18 – 31 ธ.ค. 2026</b><span>ไป ศ. 18 ธ.ค. · กลับถึง พฤ. 31 ธ.ค.</span></div>
-   <div><span class="lbl m">Countries</span><b>ฝรั่งเศส · สวิตเซอร์แลนด์</b><span>สองประเทศในเขต Schengen</span></div>
+   <div><span class="lbl m">Countries</span><b><span class="nw"><i class="flag fr" aria-hidden="true"></i>ฝรั่งเศส</span> · <span class="nw"><i class="flag ch" aria-hidden="true"></i>สวิตเซอร์แลนด์</span></b><span>สองประเทศในเขต Schengen</span></div>
    <div><span class="lbl m">Cities</span><b>4 เมือง · 12 คืน</b><span>ปารีส สตราสบูร์ก อินเทอร์ลาเคน ลูเซิร์น</span></div>
    <div><span class="lbl m">Companions</span><b>ไม่มี · เดินทางคนเดียว</b><span>ทริปเดี่ยว</span></div>
    <div><span class="lbl m">Leave</span><b>9 วันทำการ</b><span>ลาพักร้อน + Oversea Travel Leave · 18–30 ธ.ค.</span></div>
@@ -590,9 +597,9 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
    <article class="fl rv">
     <div class="top"><img src="img/logo/thai.svg" alt="Thai Airways" width="130" height="28"><span class="lbl">Outbound · TG930</span></div>
     <div class="mid">
-     <div class="ap"><b>BKK</b><span>กรุงเทพฯ สุวรรณภูมิ</span></div>
+     <div class="ap"><b>BKK</b><span><i class="flag th" aria-hidden="true"></i>กรุงเทพฯ สุวรรณภูมิ</span></div>
      <div class="path" aria-hidden="true"><svg viewBox="0 0 92 14"><line x1="2" y1="7" x2="78" y2="7" stroke="#cdc7bc" stroke-dasharray="3 3"/><path d="M80 2l10 5-10 5z" fill="#121212"/></svg><span>12h 45m</span></div>
-     <div class="ap r"><b>CDG</b><span>ปารีส · อาคาร 1</span></div>
+     <div class="ap r"><b>CDG</b><span><i class="flag fr" aria-hidden="true"></i>ปารีส · อาคาร 1</span></div>
     </div>
     <div class="bot">
      <div><span class="lbl">Date</span><b>คืน พฤ. 17 ธ.ค.</b></div>
@@ -604,9 +611,9 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
    <article class="fl rv">
     <div class="top"><img src="img/logo/thai.svg" alt="Thai Airways" width="130" height="28"><span class="lbl">Return · TG971</span></div>
     <div class="mid">
-     <div class="ap"><b>ZRH</b><span>ซูริก</span></div>
+     <div class="ap"><b>ZRH</b><span><i class="flag ch" aria-hidden="true"></i>ซูริก</span></div>
      <div class="path" aria-hidden="true"><svg viewBox="0 0 92 14"><line x1="2" y1="7" x2="78" y2="7" stroke="#cdc7bc" stroke-dasharray="3 3"/><path d="M80 2l10 5-10 5z" fill="#121212"/></svg><span>10h 35m</span></div>
-     <div class="ap r"><b>BKK</b><span>กรุงเทพฯ สุวรรณภูมิ</span></div>
+     <div class="ap r"><b>BKK</b><span><i class="flag th" aria-hidden="true"></i>กรุงเทพฯ สุวรรณภูมิ</span></div>
     </div>
     <div class="bot">
      <div><span class="lbl">Date</span><b>พ. 30 ธ.ค.</b></div>
@@ -755,6 +762,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
 <script>
+const FLAG=c=>`<i class="flag ${/^France/.test(c)?"fr":"ch"}" aria-hidden="true"></i>`;
 const CITY={bkk:{en:"Bangkok",th:"กรุงเทพฯ"},par:{en:"Paris",th:"ปารีส"},stg:{en:"Strasbourg",th:"สตราสบูร์ก"},col:{en:"Colmar",th:"โคลมาร์"},int:{en:"Interlaken",th:"อินเทอร์ลาเคน"},luz:{en:"Lucerne",th:"ลูเซิร์น"}};
 const ROUTE=[
  {c:"bkk"},
@@ -842,7 +850,7 @@ function info(dt){
  return {k,y,m,d,dow,cls,s,D,inRange:dt>=new Date(2026,11,17)&&dt<=new Date(2027,0,4)};
 }
 
-$("#tiles").innerHTML=CHAPTERS.map((c,i)=>{const r=ROUTE[i+1];return `<a class="tile rv" href="#${c.id}"><div class="ph"><img src="img/${c.img}-s.webp" alt="${c.alt}" loading="lazy" decoding="async"></div><span class="lbl">${c.n} · ${c.country}</span><b>${CITY[c.city].en}</b><span class="d">${c.dates} · ${c.nights}</span><p>${r.p}</p><span class="via">${r.via}</span></a>`;}).join("");
+$("#tiles").innerHTML=CHAPTERS.map((c,i)=>{const r=ROUTE[i+1];return `<a class="tile rv" href="#${c.id}"><div class="ph"><img src="img/${c.img}-s.webp" alt="${c.alt}" loading="lazy" decoding="async"></div><span class="lbl">${FLAG(c.country)}${c.n} · ${c.country}</span><b>${CITY[c.city].en}</b><span class="d">${c.dates} · ${c.nights}</span><p>${r.p}</p><span class="via">${r.via}</span></a>`;}).join("");
 $("#staysGrid").innerHTML=STAYS.map(s=>`<article class="stay rv"><div class="lg"><img src="img/logo/${s.logo}" alt="${s.name}" loading="lazy"></div><div class="bd"><span class="lbl">${CITY[s.city].en}</span><b>${s.name}</b><p>${s.p}</p><span class="nt">${s.dates}</span></div></article>`).join("");
 
 function buildCal(){
@@ -905,7 +913,7 @@ function buildDaily(){
  $("#chapters").innerHTML=`<div class="wrap">${dayHTML("2026-12-17")}</div>`+CHAPTERS.map(c=>`
   <section class="chap" id="${c.id}">
    <div class="chero"><img src="img/${c.img}.webp" srcset="img/${c.img}-s.webp 1200w, img/${c.img}.webp 2400w" sizes="100vw" alt="${c.alt}" loading="lazy" decoding="async">
-    <div class="t"><div class="wrap"><span class="lbl">Chapter ${c.n} · ${c.country}</span><h2>${CITY[c.city].en}</h2>
+    <div class="t"><div class="wrap"><span class="lbl">${FLAG(c.country)}Chapter ${c.n} · ${c.country}</span><h2>${CITY[c.city].en}</h2>
      <div class="meta">${c.dates} · ${c.nights}</div></div></div>
    </div>
    <div class="wrap"><div class="intro"><p>${c.intro}</p></div>
