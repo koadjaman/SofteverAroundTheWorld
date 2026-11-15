@@ -261,6 +261,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line2)}
 .track .office{position:absolute;top:6px;bottom:6px;background:var(--mist)}
 .track .seg{position:absolute;top:8px;bottom:8px;background:var(--ink)}
+.track .fly{position:absolute;top:8px;bottom:8px;border:1px solid var(--ink);background:repeating-linear-gradient(135deg,var(--ink) 0 1px,transparent 1px 5px)}
 .track .lab{position:absolute;top:-14px;font:500 12.5px/1 var(--sans);color:var(--ink);white-space:nowrap}
 .track .lab.m{color:var(--mute);font:400 13px/1 var(--thai)}
 .hnote{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:16px;font:400 14.5px/1.5 var(--thai);color:var(--ink2)}
@@ -594,9 +595,9 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
      <div class="ap r"><b>CDG</b><span>ปารีส · อาคาร 1</span></div>
     </div>
     <div class="bot">
-     <div><span class="lbl">Date</span><b>ศ. 18 ธ.ค.</b></div>
-     <div><span class="lbl">Depart</span><b class="tnum">00:05</b></div>
-     <div><span class="lbl">Arrive</span><b class="tnum">06:50</b></div>
+     <div><span class="lbl">Date</span><b>คืน พฤ. 17 ธ.ค.</b></div>
+     <div><span class="lbl">Depart</span><b class="tnum">00:05 · 18 ธ.ค.</b></div>
+     <div><span class="lbl">Arrive</span><b class="tnum">06:50 · 18 ธ.ค.</b></div>
      <div><span class="lbl">Aircraft</span><b class="tnum">777-300ER</b></div>
     </div>
    </article>
@@ -604,13 +605,13 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
     <div class="top"><img src="img/logo/thai.svg" alt="Thai Airways" width="130" height="28"><span class="lbl">Return · TG971</span></div>
     <div class="mid">
      <div class="ap"><b>ZRH</b><span>ซูริก</span></div>
-     <div class="path" aria-hidden="true"><svg viewBox="0 0 92 14"><line x1="2" y1="7" x2="78" y2="7" stroke="#cdc7bc" stroke-dasharray="3 3"/><path d="M80 2l10 5-10 5z" fill="#121212"/></svg><span>≈ 11h</span></div>
+     <div class="path" aria-hidden="true"><svg viewBox="0 0 92 14"><line x1="2" y1="7" x2="78" y2="7" stroke="#cdc7bc" stroke-dasharray="3 3"/><path d="M80 2l10 5-10 5z" fill="#121212"/></svg><span>10h 35m</span></div>
      <div class="ap r"><b>BKK</b><span>กรุงเทพฯ สุวรรณภูมิ</span></div>
     </div>
     <div class="bot">
      <div><span class="lbl">Date</span><b>พ. 30 ธ.ค.</b></div>
      <div><span class="lbl">Depart</span><b class="tnum">13:15</b></div>
-     <div><span class="lbl">Arrive</span><b>เช้า 31 ธ.ค.</b></div>
+     <div><span class="lbl">Arrive</span><b class="tnum">05:50 · 31 ธ.ค.</b></div>
      <div><span class="lbl">Cabin</span><b class="tnum">Economy</b></div>
     </div>
    </article>
@@ -627,7 +628,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
   <div class="mapcap"><span>รถไฟ ปารีส → สตราสบูร์ก → บาเซิล → อินเทอร์ลาเคน → ลูเซิร์น → ซูริก</span><span>แตะหมุดเพื่อดูชื่อเมือง</span></div>
   <div class="leg" style="margin-top:28px"><span class="w">Depart · Dec 18</span><span>บินตรง TG930 คืนวันที่ 17 ต่อเนื่อง 18 ธ.ค. สู่ปารีส</span><b>Bangkok</b></div>
   <div class="tiles" id="tiles"></div>
-  <div class="leg"><span class="w">Return · Dec 30–31</span><span>รถไฟสู่สนามบินซูริก บินตรง TG971 ถึงกรุงเทพฯ เช้าวันที่ 31</span><b>Bangkok</b></div>
+  <div class="leg"><span class="w">Return · Dec 30–31</span><span>รถไฟสู่สนามบินซูริก บินตรง TG971 ถึงกรุงเทพฯ 05:50 วันที่ 31</span><b>Bangkok</b></div>
  </div>
 </section>
 
@@ -691,6 +692,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
   <div class="hnote">
    <span><i style="background:var(--ink)"></i>ติดต่อได้</span>
    <span><i style="background:var(--mist)"></i>เวลาออฟฟิศ 09:00–18:00</span>
+   <span><i style="border:1px solid var(--ink);background:repeating-linear-gradient(135deg,var(--ink) 0 1px,transparent 1px 4px)"></i>สนามบิน / บนเครื่อง (ติดต่อไม่ได้)</span>
   </div>
  </div>
 </section>
@@ -783,8 +785,8 @@ const CHAPTERS=[
 ];
 /* items: [name, note, lat, lng] — null coords stay off the city map */
 const DAY={
- "2026-12-17":{city:"bkk",type:"work",tl:"Work · night flight",temp:"25–33°C",th:[[9,18]],st:"ทำงานปกติ",title:"วันทำงานสุดท้าย",en:"Departure",lede:"ทำงานตามปกติทั้งวัน แล้วไปสนามบินสุวรรณภูมิช่วงค่ำ ขึ้นเครื่องหลังเที่ยงคืนสู่ปารีส",fl:"TG930 · BKK 00:05 → CDG 06:50 (18 ธ.ค.)"},
- "2026-12-18":{city:"par",type:"travel",tl:"Leave + arrival",temp:"2–8°C",th:[[18,21]],st:"วันเดินทาง",sub:"เฉพาะเรื่องด่วน",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel from Trocadéro",potd:"หอไอเฟลเปิดไฟระยิบจาก Trocadéro",lede:"ลงเครื่องเช้าตรู่ เข้าเมือง แล้วใช้วันแรกปรับเวลา ไม่วางแผนหนัก",
+ "2026-12-17":{city:"bkk",type:"work",tl:"Work · night flight",temp:"25–33°C",th:[[9,18]],fly:[[21,24]],st:"ทำงาน · บินคืนนี้",sub:"ถึงสนามบิน 21:00 · ออก 00:05",title:"วันทำงานสุดท้าย",en:"Departure",lede:"ทำงานตามปกติทั้งวัน ถึงสนามบินสุวรรณภูมิราว 21:00 เครื่องออก 00:05 หลังเที่ยงคืน (นับเป็นวันศุกร์ที่ 18)",fl:"TG930 · คืนนี้ BKK 00:05 → CDG 06:50 เวลาปารีส"},
+ "2026-12-18":{city:"par",type:"travel",tl:"Leave + arrival",temp:"2–8°C",th:[[18,21]],fly:[[0,12.83]],st:"วันเดินทาง",sub:"บนเครื่องถึง 12:50 · ด่วนเท่านั้น",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel from Trocadéro",potd:"หอไอเฟลเปิดไฟระยิบจาก Trocadéro",lede:"ลงเครื่องเช้าตรู่ เข้าเมือง แล้วใช้วันแรกปรับเวลา ไม่วางแผนหนัก",
   items:[["Rive Gauche","เดินเล่นฝั่งซ้ายแม่น้ำแซน หาคาเฟ่และมื้อแรก",48.8540,2.3330],["Trocadéro","ชมหอไอเฟลเปิดไฟระยิบทุกต้นชั่วโมงหลังพระอาทิตย์ตก",48.8616,2.2893]]},
  "2026-12-19":{city:"par",type:"off",tl:"Weekend",temp:"2–8°C",th:[],st:"วันหยุด",title:"ลูฟวร์และตลาดคริสต์มาส",en:"Le Louvre & les Tuileries",img:"d19",cap:"Musée du Louvre",potd:"พีระมิดลูฟวร์ยามโพล้เพล้",lede:"วันพิพิธภัณฑ์เต็มวัน ต่อด้วยไฟคริสต์มาสย่าน Opéra",
   items:[["Musée du Louvre","พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก",48.8606,2.3376],["Jardin des Tuileries","ตลาดคริสต์มาสในสวนหน้าลูฟวร์",48.8635,2.3275],["Galeries Lafayette","ต้นคริสต์มาสยักษ์ใต้โดมกระจก และดาดฟ้าชมเมือง",48.8738,2.3320],["Champs-Élysées","ถนนประดับไฟคริสต์มาสยามค่ำ",48.8698,2.3078]]},
@@ -808,9 +810,9 @@ const DAY={
   items:[["Luzern–Interlaken Express","เส้นทางรถไฟผ่านทะเลสาบและช่องเขา Brünig",null,null],["Kapellbrücke","สะพานไม้มีหลังคาที่เก่าแก่ที่สุดในยุโรป",47.0517,8.3077],["Löwendenkmal","อนุสาวรีย์สิงโตแกะสลักในหน้าผา",47.0584,8.3105]]},
  "2026-12-29":{city:"luz",type:"leave",tl:"Leave · day trip",temp:"−4–2°C ยอดเขา",th:[[13,14.25]],st:"ลา · ตอบช่วงสั้น",title:"ราชินีแห่งขุนเขา",en:"Rigi",img:"d29",cap:"Rigi Bahn, Rigi Staffel",potd:"ทะเลหมอกจากยอด Rigi Kulm",lede:"เช้าเปิดดูงานก่อนออก แล้วขึ้นเขา Rigi ด้วยรถไฟฟันเฟือง",
   items:[["Rigi Bahn","รถไฟฟันเฟืองสายแรกของยุโรป",47.0103,8.4838],["Rigi Kulm","ยอดเขา 1,798 เมตร มองเห็นทะเลหมอกและทะเลสาบรอบด้าน",47.0567,8.4853]]},
- "2026-12-30":{city:"luz",type:"travel",tl:"Leave + flight",temp:"−2–4°C",th:[[14.5,15.75]],st:"วันเดินทางกลับ",sub:"เฉพาะเรื่องด่วน",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee from Pilatus",potd:"ทะเลสาบลูเซิร์นยามเช้า",lede:"รถไฟเช้าไปสนามบินซูริก ขึ้นเครื่องบินกลับกรุงเทพฯ ช่วงบ่าย",fl:"TG971 · ZRH 13:15 → BKK เช้า 31 ธ.ค.",
+ "2026-12-30":{city:"luz",type:"travel",tl:"Leave + flight",temp:"−2–4°C",th:[[14.5,15.75]],fly:[[17.25,24]],st:"วันเดินทางกลับ",sub:"บนเครื่องตั้งแต่ 19:15",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee from Pilatus",potd:"ทะเลสาบลูเซิร์นยามเช้า",lede:"รถไฟเช้าไปสนามบินซูริก ขึ้นเครื่องบินกลับกรุงเทพฯ 13:15 เวลาซูริก (19:15 เวลาไทย)",fl:"TG971 · ZRH 13:15 → BKK 05:50 (31 ธ.ค.)",
   items:[["Lake Lucerne","เดินเล่นริมทะเลสาบก่อนออกเดินทาง",47.0522,8.3120],["Zürich Airport","รถไฟสู่สนามบิน",null,null]]},
- "2026-12-31":{city:"bkk",type:"hol",tl:"Holiday · arrival",temp:"25–33°C",th:[],st:"วันสิ้นปี",title:"ถึงกรุงเทพฯ",en:"Home",lede:"ถึงกรุงเทพฯ ช่วงเช้า พักวันหยุดปีใหม่ถึงวันที่ 3 มกราคม ส่ง Photo of the Trip และกลับมาทำงานวันจันทร์ที่ 4",fl:"TG971 · ถึง BKK เช้า 31 ธ.ค."}
+ "2026-12-31":{city:"bkk",type:"hol",tl:"Holiday · arrival",temp:"25–33°C",th:[],fly:[[0,5.83]],st:"วันสิ้นปี",sub:"ถึงสุวรรณภูมิ 05:50",title:"ถึงกรุงเทพฯ",en:"Home",lede:"ถึงกรุงเทพฯ 05:50 พักวันหยุดปีใหม่ถึงวันที่ 3 มกราคม ส่ง Photo of the Trip และกลับมาทำงานวันจันทร์ที่ 4",fl:"TG971 · ถึง BKK 05:50"}
 };
 const ROUTE_PTS=[["Paris",48.8566,2.3522,1],["Strasbourg",48.5734,7.7521,2],["Colmar",48.0794,7.3585,"C"],["Basel",47.5476,7.5897,"B"],["Interlaken",46.6863,7.8632,3],["Lucerne",47.0502,8.3093,4],["Zürich Airport",47.4582,8.5555,"Z"]];
 const RAIL=[0,1,3,4,5,6];
@@ -877,7 +879,7 @@ function buildHours(){
  let h=`<div class="hh"><span class="lbl">Date</span><span class="lbl">City</span><span class="lbl h3">Status</span><div class="scale">${[0,6,12,18,24].map(x=>`<span style="left:${pct(x)}">${p2(x)}:00</span>`).join("")}</div></div>`;
  for(const [k,D] of Object.entries(DAY)){
   const dt=parse(k),off=!D.th.length,f=off?0:D.th[0][0];
-  const segs=D.th.map(([s,e])=>`<span class="seg" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("");
+  const segs=D.th.map(([s,e])=>`<span class="seg" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("")+(D.fly||[]).map(([s,e])=>`<span class="fly" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("");
   const lab=off?`<span class="lab m" style="left:0">ไม่ได้เช็คข้อความ</span>`:(f>12?`<span class="lab tnum" style="right:${(100-D.th[D.th.length-1][1]/24*100).toFixed(3)}%">${win(D.th)}</span>`:`<span class="lab tnum" style="left:${pct(f)}">${win(D.th)}</span>`);
   h+=`<div class="hr${off?" off":""}"><div class="dt"><b class="tnum">${dt.getDate()}</b><span class="lbl">${WEN[dt.getDay()]} · ${MEN[dt.getMonth()]}</span></div><div class="ct">${CITY[D.city].en}</div><div class="st">${D.st}${D.sub?`<small>${D.sub}</small>`:""}</div><div class="track" role="img" aria-label="${off?"ไม่ได้เช็คข้อความ":"ติดต่อได้ "+win(D.th)+" เวลาไทย"}">${office}${segs}${lab}</div></div>`;
  }
