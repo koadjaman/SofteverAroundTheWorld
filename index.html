@@ -106,6 +106,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* intro */
 .note{padding:clamp(44px,5.5vw,72px) 0 clamp(40px,5vw,64px);text-align:center}
 .note p{font:400 clamp(18.5px,2vw,24px)/1.65 var(--thai);max-width:30em;margin:0 auto}
+.now[hidden]{display:none}
 .now{display:inline-flex;align-items:center;gap:12px;margin-top:24px;padding:12px 20px;background:var(--porcelain);border:1px solid var(--line);font:400 15px/1.5 var(--thai);color:var(--ink2);text-align:left}
 .now i{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
 
@@ -571,7 +572,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
 <section class="note">
  <div class="wrap">
   <p>ทริป Softever Around The World 2026 ที่ฝรั่งเศสและสวิตเซอร์แลนด์</p>
-  <div class="now" role="status"><i aria-hidden="true"></i><span id="now">—</span></div>
+  <div class="now" role="status" hidden><i aria-hidden="true"></i><span id="now">—</span></div>
  </div>
 </section>
 
@@ -957,10 +958,10 @@ function initMaps(){
 function status(){
  const t=bkkToday(),k=keyOf(t),start=new Date(2026,11,18),back=new Date(2027,0,4);
  let s;
- if(t<start){const n=Math.round((start-t)/864e5);s=`ตอนนี้ทำงานตามปกติ · เริ่มเดินทางวันศุกร์ที่ 18 ธันวาคม (อีก ${n} วัน)`;}
+ if(t<start){$("#now").parentNode.hidden=true;return;}
  else if(t<back){const D=DAY[k];s="กำลังเดินทาง · "+(D&&D.th.length?`วันนี้ติดต่อได้ ${win(D.th)} เวลาไทย`:"วันนี้ไม่ได้เช็คข้อความ")+" · กลับวันจันทร์ที่ 4 ม.ค.";}
  else s="กลับมาทำงานตามปกติแล้ว";
- $("#now").textContent=s;
+ $("#now").textContent=s;$("#now").parentNode.hidden=false;
 }
 const fmt=tz=>new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date());
 function tick(){$("#tBkk").textContent=fmt("Asia/Bangkok");$("#tEu").textContent=fmt("Europe/Paris");}
