@@ -7,7 +7,7 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#ffffff">
 <title>Softever Around The World</title>
-<meta name="description" content="Softever Around The World 2026 · ฝรั่งเศสและสวิตเซอร์แลนด์ 18–31 ธันวาคม · เที่ยวบิน ที่พัก ปฏิทินลา ช่วงเวลาที่ติดต่อได้ และแผนรายวัน">
+<meta name="description" content="Softever Around The World 2026 · ฝรั่งเศสและสวิตเซอร์แลนด์ 18–31 ธันวาคม · เที่ยวบิน ที่พัก ปฏิทินลา และแผนรายวัน">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="img/logo/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
@@ -203,6 +203,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* stats + legend */
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);margin:clamp(26px,3.2vw,40px) 0}
+.stats.s3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .stats>div{border-top:1px solid var(--ink);padding-top:14px}
 .stats b{display:block;font:300 32px/1.1 var(--sans);letter-spacing:-.01em;margin:10px 0 6px;white-space:nowrap}
 .stats span{font:400 14.5px/1.55 var(--thai);color:var(--ink2)}
@@ -543,6 +544,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
  .trav .ph{aspect-ratio:4/5;max-height:80svh}
  .map{height:70svh}
 }
+@media (max-width:700px){.stats.s3{grid-template-columns:1fr;gap:16px}.stats.s3 b{white-space:normal}}
 </style>
 </head>
 <body>
@@ -552,9 +554,9 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
  <div class="wrap bar">
   <nav aria-label="Sections"><a class="n" href="#programme">Programme</a><a class="n" href="#flights">Flights</a><a class="n" href="#route">Route</a><a class="n" href="#stays">Stays</a></nav>
   <a class="brand" href="#top" aria-label="Softever Around The World — กลับขึ้นด้านบน"><img src="img/logo/secondary.svg" alt="Softever" width="96" height="24"><span>Around The World</span></a>
-  <nav class="r" aria-label="More sections"><a class="n" href="#availability">Availability</a><a class="n" href="#daily">Daily plan</a><a class="n" href="#rituals">Rituals</a><a class="n" href="#absence">While away</a></nav>
+  <nav class="r" aria-label="More sections"><a class="n" href="#calendar">Calendar</a><a class="n" href="#daily">Daily plan</a><a class="n" href="#rituals">Rituals</a><a class="n" href="#absence">While away</a></nav>
  </div>
- <nav class="mnav" aria-label="Sections"><a class="n" href="#programme">Programme</a><a class="n" href="#flights">Flights</a><a class="n" href="#route">Route</a><a class="n" href="#stays">Stays</a><a class="n" href="#availability">Availability</a><a class="n" href="#daily">Daily plan</a><a class="n" href="#rituals">Rituals</a><a class="n" href="#absence">While away</a></nav>
+ <nav class="mnav" aria-label="Sections"><a class="n" href="#programme">Programme</a><a class="n" href="#flights">Flights</a><a class="n" href="#route">Route</a><a class="n" href="#stays">Stays</a><a class="n" href="#calendar">Calendar</a><a class="n" href="#daily">Daily plan</a><a class="n" href="#rituals">Rituals</a><a class="n" href="#absence">While away</a></nav>
 </header>
 
 <main id="top">
@@ -657,7 +659,7 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
     <p>ทริปเดี่ยวช่วงคริสต์มาส เที่ยวแบบไม่เร่ง ผ่านพิพิธภัณฑ์ ตลาดคริสต์มาส และเทือกเขาแอลป์</p>
     <div class="tags"><span>Museums</span><span>Christmas markets</span><span>Alpine rail</span><span>Slow mornings</span></div>
     <div class="traits">
-     <div><span class="lbl m">Morning</span><b class="tnum">07:00–08:30</b><span>ช่วงเช้าเวลายุโรป</span></div>
+     <div><span class="lbl m">Mornings</span><b>Slow starts</b><span>เริ่มวันแบบไม่รีบ</span></div>
      <div><span class="lbl m">Getting around</span><b>Trains</b><span>TGV · TER · Swiss rail · รถไฟฟันเฟือง</span></div>
      <div><span class="lbl m">Pace</span><b>One area a day</b><span>วันละย่าน พักไม่ต่ำกว่าสองคืนต่อเมือง</span></div>
     </div>
@@ -666,47 +668,36 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
  </div>
 </section>
 
-<!-- AVAILABILITY -->
-<section class="sec" id="availability">
+<!-- CALENDAR -->
+<section class="sec" id="calendar">
  <div class="wrap">
   <div class="sh split">
-   <div><span class="lbl m">December 17 – January 4</span><h2>Availability calendar</h2><p>แสดงวันทำงาน วันลา วันเดินทาง และวันหยุด แตะวันที่เพื่อดูว่าอยู่เมืองไหนและติดต่อได้กี่โมง</p></div>
+   <div><span class="lbl m">December 2026</span><h2>Leave calendar</h2><p>แสดงวันทำงาน วันลา และวันหยุด แตะวันที่เพื่อดูว่าอยู่เมืองไหน</p></div>
    <div class="clocks">
     <div><b class="tnum" id="tBkk">--:--</b><span class="lbl m">Bangkok</span></div>
     <div><b class="tnum" id="tEu">--:--</b><span class="lbl m">Paris · Zürich</span></div>
    </div>
   </div>
-  <div class="stats">
+  <div class="stats s3">
    <div><span class="lbl m">Leave</span><b>9 days</b><span>วันลา (วันทำการ) 18–30 ธ.ค.</span></div>
-   <div><span class="lbl m">Core local</span><b class="tnum">07:00–08:30</b><span>ช่วงเช้าเวลายุโรป</span></div>
-   <div><span class="lbl m">Thailand</span><b class="tnum">13:00–14:30</b><span>วันทำการที่ลา · ตอบช่วงสั้น</span></div>
-   <div><span class="lbl m">Back</span><b>Mon 4 Jan</b><span>กลับมาทำงานปกติ</span></div>
+   <div><span class="lbl m">Away</span><b>4 cities</b><span>ปารีส สตราสบูร์ก อินเทอร์ลาเคน ลูเซิร์น</span></div>
+   <div><span class="lbl m">Urgent</span><b>Team lead</b><span>ติดต่อหัวหน้าทีมงาน หรือคนที่มอบหมายไว้</span></div>
   </div>
   <div class="legend">
-   <span><i></i>ทำงานปกติ</span>
-   <span><i class="ll"></i>ลาพักร้อน</span>
-   <span><i class="lt"></i>ลา + วันเดินทาง</span>
+   <span><i></i>ทำงาน</span>
+   <span><i class="ll"></i>ลา</span>
    <span><i style="border-color:var(--line)"></i>เสาร์–อาทิตย์</span>
    <span><i class="lh"></i>วันหยุดนักขัตฤกษ์</span>
-   <span><i class="lb"></i>กลับมาทำงาน</span>
   </div>
-  <div class="cal" id="cal" aria-label="ปฏิทิน 14 ธ.ค. 2026 – 10 ม.ค. 2027"></div>
+  <div class="cal" id="cal" aria-label="ปฏิทิน 14 ธ.ค. 2026 – 3 ม.ค. 2027"></div>
   <div class="panel" id="panel" aria-live="polite"></div>
-
-  <div class="sub"><h3>Hours, day by day</h3><p>เวลาประเทศไทย · ยุโรปช้ากว่าไทย 6 ชั่วโมง (08:00 ที่ยุโรป = 14:00 ที่ไทย)</p></div>
-  <div class="hrs" id="hrs"></div>
-  <div class="hnote">
-   <span><i style="background:var(--ink)"></i>ติดต่อได้</span>
-   <span><i style="background:var(--mist)"></i>เวลาออฟฟิศ 09:00–18:00</span>
-   <span><i style="border:1px solid var(--ink);background:repeating-linear-gradient(135deg,var(--ink) 0 1px,transparent 1px 4px)"></i>สนามบิน / บนเครื่อง (ติดต่อไม่ได้)</span>
-  </div>
  </div>
 </section>
 
 <!-- DAILY PLAN -->
 <section class="sec band" id="daily">
  <div class="wrap">
-  <div class="sh"><span class="lbl m">December 17–31, 2026</span><h2>Daily plan, city by city.</h2><p>แต่ละเมืองมีแผนที่และหมุดตามสถานที่ ทุกวันมีอุณหภูมิโดยประมาณ ช่วงที่ติดต่อได้ และจุดถ่าย Photo of the Day</p></div>
+  <div class="sh"><span class="lbl m">December 17–31, 2026</span><h2>Daily plan, city by city.</h2><p>แต่ละเมืองมีแผนที่และหมุดตามสถานที่ ทุกวันมีอุณหภูมิโดยประมาณ และจุดถ่าย Photo of the Day</p></div>
  </div>
  <div id="chapters"></div>
 </section>
@@ -739,11 +730,11 @@ footer .credit{margin-top:14px;font:400 12.5px/1.7 var(--sans);color:#a9a49c}
 <!-- WHILE AWAY -->
 <section class="sec band" id="absence">
  <div class="wrap">
-  <div class="sh"><span class="lbl m">While I'm away</span><h2>How to reach me</h2></div>
+  <div class="sh"><span class="lbl m">While I'm away</span><h2>Who to contact</h2></div>
   <div class="away">
-   <div><span class="n">i.</span><h3>เรื่องด่วน</h3><p>ส่งทาง Slack พร้อมสรุปสั้น ๆ ว่าต้องการให้ตัดสินใจหรือช่วยเรื่องอะไร จะตอบในช่วง 13:00–14:30 ของวันทำการ</p></div>
-   <div><span class="n">ii.</span><h3>เรื่องไม่ด่วน</h3><p>เก็บไว้คุยหลังวันที่ 4 มกราคม หรือส่งอีเมลไว้ก่อน จะไล่อ่านทั้งหมดในวันแรกที่กลับมา</p></div>
-   <div><span class="n">iii.</span><h3>วันที่ไม่ได้เช็คข้อความ</h3><p>เสาร์–อาทิตย์ระหว่างทริป ช่วงที่อยู่บนเครื่องบิน และวันที่ 31 ธันวาคม ถึง 3 มกราคม</p></div>
+   <div><span class="n">i.</span><h3>เรื่องด่วน</h3><p>ติดต่อหัวหน้าทีมงาน หรือคนที่มอบหมายไว้</p></div>
+   <div><span class="n">ii.</span><h3>เรื่องไม่ด่วน</h3><p>ฝากข้อความหรืออีเมลไว้ได้ จะทยอยตอบเมื่อสะดวก</p></div>
+   <div><span class="n">iii.</span><h3>วันลา</h3><p>18–30 ธันวาคม 2026 รวม 9 วันทำการ</p></div>
   </div>
  </div>
 </section>
@@ -792,34 +783,34 @@ const CHAPTERS=[
 ];
 /* items: [name, note, lat, lng] — null coords stay off the city map */
 const DAY={
- "2026-12-17":{city:"bkk",type:"work",tl:"Work · night flight",temp:"25–33°C",th:[[9,18]],fly:[[21,24]],st:"ทำงาน · บินคืนนี้",sub:"ถึงสนามบิน 21:00 · ออก 00:05",title:"วันทำงานสุดท้าย",en:"Departure",lede:"ทำงานตามปกติทั้งวัน ถึงสนามบินสุวรรณภูมิราว 21:00 เครื่องออก 00:05 หลังเที่ยงคืน (นับเป็นวันศุกร์ที่ 18)",fl:"TG930 · คืนนี้ BKK 00:05 → CDG 06:50 เวลาปารีส"},
- "2026-12-18":{city:"par",type:"travel",tl:"Leave + arrival",temp:"2–8°C",th:[[18,21]],fly:[[0,12.83]],st:"วันเดินทาง",sub:"บนเครื่องถึง 12:50 · ด่วนเท่านั้น",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel from Trocadéro",potd:"หอไอเฟลเปิดไฟระยิบจาก Trocadéro",lede:"ลงเครื่องเช้าตรู่ เข้าเมือง แล้วใช้วันแรกปรับเวลา ไม่วางแผนหนัก",
+ "2026-12-17":{city:"bkk",type:"work",tl:"Work · night flight",temp:"25–33°C",title:"วันทำงานสุดท้าย",en:"Departure",lede:"ทำงานตามปกติทั้งวัน ถึงสนามบินสุวรรณภูมิราว 21:00 เครื่องออก 00:05 หลังเที่ยงคืน (นับเป็นวันศุกร์ที่ 18)",fl:"TG930 · คืนนี้ BKK 00:05 → CDG 06:50 เวลาปารีส"},
+ "2026-12-18":{city:"par",type:"travel",tl:"Leave + arrival",temp:"2–8°C",title:"ถึงปารีส",en:"Arrivée à Paris",img:"d18",cap:"Tour Eiffel from Trocadéro",potd:"หอไอเฟลเปิดไฟระยิบจาก Trocadéro",lede:"ลงเครื่องเช้าตรู่ เข้าเมือง แล้วใช้วันแรกปรับเวลา ไม่วางแผนหนัก",
   items:[["Rive Gauche","เดินเล่นฝั่งซ้ายแม่น้ำแซน หาคาเฟ่และมื้อแรก",48.8540,2.3330],["Trocadéro","ชมหอไอเฟลเปิดไฟระยิบทุกต้นชั่วโมงหลังพระอาทิตย์ตก",48.8616,2.2893]]},
- "2026-12-19":{city:"par",type:"off",tl:"Weekend",temp:"2–8°C",th:[],st:"วันหยุด",title:"ลูฟวร์และตลาดคริสต์มาส",en:"Le Louvre & les Tuileries",img:"d19",cap:"Musée du Louvre",potd:"พีระมิดลูฟวร์ยามเย็น",lede:"วันพิพิธภัณฑ์เต็มวัน ต่อด้วยไฟคริสต์มาสย่าน Opéra",
+ "2026-12-19":{city:"par",type:"off",tl:"Weekend",temp:"2–8°C",title:"ลูฟวร์และตลาดคริสต์มาส",en:"Le Louvre & les Tuileries",img:"d19",cap:"Musée du Louvre",potd:"พีระมิดลูฟวร์ยามเย็น",lede:"วันพิพิธภัณฑ์เต็มวัน ต่อด้วยไฟคริสต์มาสย่าน Opéra",
   items:[["Musée du Louvre","พิพิธภัณฑ์ศิลปะที่ใหญ่ที่สุดในโลก",48.8606,2.3376],["Jardin des Tuileries","ตลาดคริสต์มาสในสวนหน้าลูฟวร์",48.8635,2.3275],["Galeries Lafayette","ต้นคริสต์มาสยักษ์ใต้โดมกระจก และดาดฟ้าชมเมือง",48.8738,2.3320],["Champs-Élysées","ถนนประดับไฟคริสต์มาสยามค่ำ",48.8698,2.3078]]},
- "2026-12-20":{city:"par",type:"off",tl:"Weekend · day trip",temp:"1–7°C",th:[],st:"วันหยุด",title:"พระราชวังแวร์ซาย",en:"Château de Versailles",img:"d20",cap:"Galerie des Glaces, Versailles",potd:"ท้องพระโรงกระจก Galerie des Glaces",lede:"นั่งรถไฟชานเมืองราวหนึ่งชั่วโมง ใช้เวลาที่แวร์ซายทั้งวัน",
+ "2026-12-20":{city:"par",type:"off",tl:"Weekend · day trip",temp:"1–7°C",title:"พระราชวังแวร์ซาย",en:"Château de Versailles",img:"d20",cap:"Galerie des Glaces, Versailles",potd:"ท้องพระโรงกระจก Galerie des Glaces",lede:"นั่งรถไฟชานเมืองราวหนึ่งชั่วโมง ใช้เวลาที่แวร์ซายทั้งวัน",
   items:[["Galerie des Glaces","ท้องพระโรงกระจกและห้องบรรทมของกษัตริย์",48.8049,2.1204],["Trianon & Hameau de la Reine","ตำหนักและหมู่บ้านของพระนางมารี อองตัวเนต",48.8156,2.1097],["Jardins de Versailles","สวนฝรั่งเศสในฤดูหนาว",48.8077,2.1130]]},
- "2026-12-21":{city:"par",type:"leave",tl:"Leave",temp:"2–8°C",th:[[13,14.5]],st:"ลา · ตอบช่วงสั้น",title:"เกาะกลางแม่น้ำแซน",en:"Île de la Cité",img:"d21",cap:"Sainte-Chapelle",potd:"หน้าต่างกระจกสี Sainte-Chapelle",lede:"เดินย่านเกาะกลางเมืองกับย่านละติน",
+ "2026-12-21":{city:"par",type:"leave",tl:"Leave",temp:"2–8°C",title:"เกาะกลางแม่น้ำแซน",en:"Île de la Cité",img:"d21",cap:"Sainte-Chapelle",potd:"หน้าต่างกระจกสี Sainte-Chapelle",lede:"เดินย่านเกาะกลางเมืองกับย่านละติน",
   items:[["Notre-Dame de Paris","มหาวิหารที่กลับมาเปิดหลังการบูรณะ",48.8530,2.3499],["Sainte-Chapelle","หน้าต่างกระจกสีจากศตวรรษที่ 13",48.8554,2.3450],["Conciergerie","พระราชวังยุคกลางริมแม่น้ำ",48.8562,2.3459],["Shakespeare and Company","ร้านหนังสือในย่านละติน",48.8526,2.3471],["Croisière sur la Seine","ล่องเรือแม่น้ำแซนยามค่ำ",48.8577,2.3405]]},
- "2026-12-22":{city:"stg",type:"travel",tl:"Leave + travel",temp:"−2–5°C",th:[[13.5,14.75],[20,21.75]],st:"วันเดินทาง",sub:"ตอบได้ตอนเช้าและบนรถไฟ",title:"จากปารีสสู่อัลซาส",en:"Vers Strasbourg",img:"d22",cap:"Musée d'Orsay & Pont Royal",potd:"บ้านไม้ริมคลอง Petite France ยามค่ำ",lede:"เช้าที่ Musée d'Orsay บ่ายนั่ง TGV ไปสตราสบูร์ก คืนแรกที่ตลาดคริสต์มาส",
+ "2026-12-22":{city:"stg",type:"travel",tl:"Leave + travel",temp:"−2–5°C",title:"จากปารีสสู่อัลซาส",en:"Vers Strasbourg",img:"d22",cap:"Musée d'Orsay & Pont Royal",potd:"บ้านไม้ริมคลอง Petite France ยามค่ำ",lede:"เช้าที่ Musée d'Orsay บ่ายนั่ง TGV ไปสตราสบูร์ก คืนแรกที่ตลาดคริสต์มาส",
   items:[["Musée d'Orsay","ผลงานอิมเพรสชันนิสม์ในสถานีรถไฟเก่า",null,null],["TGV","รถไฟความเร็วสูงสู่สตราสบูร์กราวสองชั่วโมง",null,null],["La Petite France","ย่านบ้านไม้ริมคลอง",48.5806,7.7410],["Place Kléber","ต้นคริสต์มาสยักษ์กลางเมือง",48.5833,7.7458]]},
- "2026-12-23":{city:"stg",type:"leave",tl:"Leave",temp:"−2–5°C",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"มหาวิหารสีกุหลาบ",en:"La Cathédrale",img:"d23",cap:"Cathédrale de Strasbourg",potd:"ด้านหน้ามหาวิหารหินทรายสีชมพู",lede:"เมืองเก่าบนเกาะ Grande Île ซึ่งเป็นมรดกโลก",
+ "2026-12-23":{city:"stg",type:"leave",tl:"Leave",temp:"−2–5°C",title:"มหาวิหารสีกุหลาบ",en:"La Cathédrale",img:"d23",cap:"Cathédrale de Strasbourg",potd:"ด้านหน้ามหาวิหารหินทรายสีชมพู",lede:"เมืองเก่าบนเกาะ Grande Île ซึ่งเป็นมรดกโลก",
   items:[["Cathédrale Notre-Dame","มหาวิหารกอทิกจากหินทรายสีชมพู",48.5818,7.7509],["Horloge astronomique","นาฬิกาดาราศาสตร์ ขบวนอัครสาวกออกมาวันละรอบ",48.5815,7.7505],["Batorama","ล่องเรือรอบเกาะ Grande Île",48.5810,7.7494],["Christkindelsmärik","ตลาดคริสต์มาสที่เก่าแก่ที่สุดในฝรั่งเศส",48.5857,7.7496]]},
- "2026-12-24":{city:"stg",type:"leave",tl:"Leave · Christmas Eve",temp:"−2–5°C",th:[[13.5,15]],st:"ลา · ตอบช่วงสั้น",title:"คืนคริสต์มาสอีฟ",en:"Le Réveillon",img:"d24",cap:"Marché de Noël, Strasbourg",potd:"ไฟตลาดคริสต์มาสคืนสุดท้าย",lede:"วันสุดท้ายของตลาดคริสต์มาส ร้านค้าส่วนใหญ่ปิดวันที่ 25–26",
+ "2026-12-24":{city:"stg",type:"leave",tl:"Leave · Christmas Eve",temp:"−2–5°C",title:"คืนคริสต์มาสอีฟ",en:"Le Réveillon",img:"d24",cap:"Marché de Noël, Strasbourg",potd:"ไฟตลาดคริสต์มาสคืนสุดท้าย",lede:"วันสุดท้ายของตลาดคริสต์มาส ร้านค้าส่วนใหญ่ปิดวันที่ 25–26",
   items:[["Neustadt","ย่านเมืองใหม่สมัยจักรวรรดิเยอรมัน มรดกโลก",48.5879,7.7545],["Marché de Noël","ตลาดคริสต์มาสวันสุดท้ายของปี",48.5822,7.7488],["Messe de minuit","มิสซาเที่ยงคืนในมหาวิหาร",48.5818,7.7512]]},
- "2026-12-25":{city:"col",type:"leave",tl:"Leave · Christmas day trip",temp:"−3–5°C",th:[[14,15]],st:"วันคริสต์มาส",sub:"เฉพาะเรื่องด่วน",title:"วันคริสต์มาสที่โคลมาร์",en:"Noël à Colmar",img:"d25",cap:"Rue des Marchands, Colmar",potd:"บ้านไม้หลากสีริมคลอง Petite Venise",lede:"รถไฟภูมิภาคราวครึ่งชั่วโมงไปเมืองเทพนิยายแห่งอัลซาส กลับสตราสบูร์กตอนค่ำ",
+ "2026-12-25":{city:"col",type:"leave",tl:"Leave · Christmas day trip",temp:"−3–5°C",title:"วันคริสต์มาสที่โคลมาร์",en:"Noël à Colmar",img:"d25",cap:"Rue des Marchands, Colmar",potd:"บ้านไม้หลากสีริมคลอง Petite Venise",lede:"รถไฟภูมิภาคราวครึ่งชั่วโมงไปเมืองเทพนิยายแห่งอัลซาส กลับสตราสบูร์กตอนค่ำ",
   items:[["Place des Dominicains","ตลาดงานฝีมือหน้าโบสถ์เก่า",48.0790,7.3570],["Petite Venise","คลองและบ้านไม้หลากสี",48.0735,7.3594],["Place Rapp","ไฟประดับ ชิงช้าสวรรค์ และลานสเก็ต",48.0774,7.3546]]},
- "2026-12-26":{city:"int",type:"off",tl:"Weekend + travel",temp:"−5–3°C",th:[],st:"วันหยุด",title:"สู่เทือกเขาแอลป์",en:"Vers les Alpes",img:"d26",cap:"Brienzersee",potd:"ยอด Jungfrau จากทุ่ง Höhematte",lede:"นั่งรถไฟข้ามพรมแดนผ่านบาเซิล ถึงอินเทอร์ลาเคนช่วงบ่าย",
+ "2026-12-26":{city:"int",type:"off",tl:"Weekend + travel",temp:"−5–3°C",title:"สู่เทือกเขาแอลป์",en:"Vers les Alpes",img:"d26",cap:"Brienzersee",potd:"ยอด Jungfrau จากทุ่ง Höhematte",lede:"นั่งรถไฟข้ามพรมแดนผ่านบาเซิล ถึงอินเทอร์ลาเคนช่วงบ่าย",
   items:[["Basel","เปลี่ยนรถไฟเข้าสวิตเซอร์แลนด์",null,null],["Interlaken","เมืองระหว่างทะเลสาบ Thun และ Brienz",46.6863,7.8632],["Höheweg","ถนนเลียบทุ่งหญ้า มองเห็นยอด Jungfrau",46.6880,7.8560]]},
- "2026-12-27":{city:"int",type:"off",tl:"Weekend · mountain",temp:"−15 – −9°C ยอดเขา",th:[],st:"วันหยุด",title:"หลังคาแห่งยุโรป",en:"Jungfraujoch",img:"d27",cap:"Sphinx, Jungfraujoch",potd:"ธารน้ำแข็ง Aletsch จากระเบียง Sphinx",lede:"ขึ้นเขาแต่เช้า ถ้าอากาศปิดจะสลับเป็นวันในเมือง",
+ "2026-12-27":{city:"int",type:"off",tl:"Weekend · mountain",temp:"−15 – −9°C ยอดเขา",title:"หลังคาแห่งยุโรป",en:"Jungfraujoch",img:"d27",cap:"Sphinx, Jungfraujoch",potd:"ธารน้ำแข็ง Aletsch จากระเบียง Sphinx",lede:"ขึ้นเขาแต่เช้า ถ้าอากาศปิดจะสลับเป็นวันในเมือง",
   items:[["Eiger Express","กระเช้าขึ้นเขาผ่านหน้าผาเหนือของ Eiger",46.6243,8.0335],["Jungfraubahn","รถไฟลอดภูเขาสู่ระดับ 3,454 เมตร",46.5852,7.9614],["Sphinx · Ice Palace","จุดชมธารน้ำแข็ง Aletsch ที่ยาวที่สุดในเทือกเขาแอลป์",46.5475,7.9853]]},
- "2026-12-28":{city:"luz",type:"travel",tl:"Leave + travel",temp:"−2–4°C",th:[[13.5,15.5],[16,18]],st:"วันเดินทาง",sub:"ตอบได้ตอนเช้าและบนรถไฟ",title:"เมืองริมทะเลสาบ",en:"Lucerne",img:"d28",cap:"Löwendenkmal",potd:"สะพานไม้ Kapellbrücke ยามค่ำ",lede:"รถไฟชมวิวผ่านช่องเขา ถึงลูเซิร์นเที่ยง บ่ายเดินเมืองเก่า",
+ "2026-12-28":{city:"luz",type:"travel",tl:"Leave + travel",temp:"−2–4°C",title:"เมืองริมทะเลสาบ",en:"Lucerne",img:"d28",cap:"Löwendenkmal",potd:"สะพานไม้ Kapellbrücke ยามค่ำ",lede:"รถไฟชมวิวผ่านช่องเขา ถึงลูเซิร์นเที่ยง บ่ายเดินเมืองเก่า",
   items:[["Luzern–Interlaken Express","เส้นทางรถไฟผ่านทะเลสาบและช่องเขา Brünig",null,null],["Kapellbrücke","สะพานไม้มีหลังคาที่เก่าแก่ที่สุดในยุโรป",47.0517,8.3077],["Löwendenkmal","อนุสาวรีย์สิงโตแกะสลักในหน้าผา",47.0584,8.3105]]},
- "2026-12-29":{city:"luz",type:"leave",tl:"Leave · day trip",temp:"−4–2°C ยอดเขา",th:[[13,14.25]],st:"ลา · ตอบช่วงสั้น",title:"ราชินีแห่งขุนเขา",en:"Rigi",img:"d29",cap:"Rigi Bahn, Rigi Staffel",potd:"ทะเลหมอกจากยอด Rigi Kulm",lede:"ขึ้นเขา Rigi ด้วยรถไฟฟันเฟือง",
+ "2026-12-29":{city:"luz",type:"leave",tl:"Leave · day trip",temp:"−4–2°C ยอดเขา",title:"ราชินีแห่งขุนเขา",en:"Rigi",img:"d29",cap:"Rigi Bahn, Rigi Staffel",potd:"ทะเลหมอกจากยอด Rigi Kulm",lede:"ขึ้นเขา Rigi ด้วยรถไฟฟันเฟือง",
   items:[["Rigi Bahn","รถไฟฟันเฟืองสายแรกของยุโรป",47.0103,8.4838],["Rigi Kulm","ยอดเขา 1,798 เมตร มองเห็นทะเลหมอกและทะเลสาบรอบด้าน",47.0567,8.4853]]},
- "2026-12-30":{city:"luz",type:"travel",tl:"Leave + flight",temp:"−2–4°C",th:[[14.5,15.75]],fly:[[17.25,24]],st:"วันเดินทางกลับ",sub:"บนเครื่องตั้งแต่ 19:15",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee from Pilatus",potd:"ทะเลสาบลูเซิร์นยามเช้า",lede:"รถไฟเช้าไปสนามบินซูริก ขึ้นเครื่องบินกลับกรุงเทพฯ 13:15 เวลาซูริก (19:15 เวลาไทย)",fl:"TG971 · ZRH 13:15 → BKK 05:50 (31 ธ.ค.)",
+ "2026-12-30":{city:"luz",type:"travel",tl:"Leave + flight",temp:"−2–4°C",title:"เช้าสุดท้ายริมทะเลสาบ",en:"Au revoir",img:"d30",cap:"Vierwaldstättersee from Pilatus",potd:"ทะเลสาบลูเซิร์นยามเช้า",lede:"รถไฟเช้าไปสนามบินซูริก ขึ้นเครื่องบินกลับกรุงเทพฯ 13:15 เวลาซูริก (19:15 เวลาไทย)",fl:"TG971 · ZRH 13:15 → BKK 05:50 (31 ธ.ค.)",
   items:[["Lake Lucerne","เดินเล่นริมทะเลสาบก่อนออกเดินทาง",47.0522,8.3120],["Zürich Airport","รถไฟสู่สนามบิน",null,null]]},
- "2026-12-31":{city:"bkk",type:"hol",tl:"Holiday · arrival",temp:"25–33°C",th:[],fly:[[0,5.83]],st:"วันสิ้นปี",sub:"ถึงสุวรรณภูมิ 05:50",title:"ถึงกรุงเทพฯ",en:"Home",lede:"ถึงกรุงเทพฯ 05:50 พักวันหยุดปีใหม่ถึงวันที่ 3 มกราคม ส่ง Photo of the Trip และกลับมาทำงานวันจันทร์ที่ 4",fl:"TG971 · ถึง BKK 05:50"}
+ "2026-12-31":{city:"bkk",type:"hol",tl:"Holiday · arrival",temp:"25–33°C",title:"ถึงกรุงเทพฯ",en:"Home",lede:"ถึงกรุงเทพฯ 05:50 ส่ง Photo of the Trip หลังกลับถึง",fl:"TG971 · ถึง BKK 05:50"}
 };
 const ROUTE_PTS=[["Paris",48.8566,2.3522,1],["Strasbourg",48.5734,7.7521,2],["Colmar",48.0794,7.3585,"C"],["Basel",47.5476,7.5897,"B"],["Interlaken",46.6863,7.8632,3],["Lucerne",47.0502,8.3093,4],["Zürich Airport",47.4582,8.5555,"Z"]];
 const RAIL=[0,1,3,4,5,6];
@@ -843,10 +834,9 @@ function info(dt){
  const k=keyOf(dt),y=dt.getFullYear(),m=dt.getMonth(),d=dt.getDate(),dow=dt.getDay(),we=dow===0||dow===6,D=DAY[k];
  let cls="work",s="ทำงาน";
  if(k==="2026-12-31"||k==="2027-01-01"){cls="hol";s=d===31?"วันสิ้นปี":"ปีใหม่";}
- else if(y===2026&&m===11&&d>=18&&d<=30){cls=we?"off":(D&&D.type==="travel"?"travel":"leave");s=we?"วันหยุด":(cls==="travel"?"เดินทาง":"ลาพักร้อน");}
  else if(we){cls="off";s="วันหยุด";}
- if(k==="2027-01-04"){cls="back";s="กลับมาทำงาน";}
- return {k,y,m,d,dow,cls,s,D,inRange:dt>=new Date(2026,11,17)&&dt<=new Date(2027,0,4)};
+ else if(y===2026&&m===11&&d>=18&&d<=30){cls="leave";s="ลา";}
+ return {k,y,m,d,dow,cls,s,D,away:y===2026&&m===11&&d>=18&&d<=30,inRange:dt>=new Date(2026,11,17)&&dt<=new Date(2026,11,31)};
 }
 
 $("#tiles").innerHTML=CHAPTERS.map((c,i)=>{const r=ROUTE[i+1];return `<a class="tile rv" href="#${c.id}"><div class="ph"><img src="img/${c.img}-s.webp" alt="${c.alt}" loading="lazy" decoding="async"></div><span class="lbl">${FLAG(c.country)}${c.n} · ${c.country}</span><b>${CITY[c.city].en}</b><span class="d">${c.dates} · ${c.nights}</span><p>${r.p}</p><span class="via">${r.via}</span></a>`;}).join("");
@@ -855,7 +845,7 @@ $("#staysGrid").innerHTML=STAYS.map(s=>`<article class="stay rv"><div class="lg"
 function buildCal(){
  const today=keyOf(bkkToday()),start=new Date(2026,11,14);
  let h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(x=>`<div class="dow lbl" aria-hidden="true">${x}</div>`).join("");
- for(let i=0;i<28;i++){
+ for(let i=0;i<21;i++){
   const dt=new Date(start);dt.setDate(start.getDate()+i);
   const I=info(dt),city=I.D&&I.D.city!=="bkk"?CITY[I.D.city].en:"";
   const mo=(I.d===1||i===0)?`<span class="mo">${MEN[I.m]}</span>`:"";
@@ -869,44 +859,27 @@ function show(k){
  const I=info(parse(k)),D=I.D;
  let where,reach;
  if(D) where=`<h3>${CITY[D.city].en}</h3><p>${CITY[D.city].th} · ${D.title}</p>`;
- else if(I.cls==="work"||I.cls==="back") where=`<h3>Office</h3><p>ทำงานที่ออฟฟิศตามปกติ</p>`;
+ else if(I.cls==="work") where=`<h3>Office</h3><p>ทำงานที่ออฟฟิศตามปกติ</p>`;
  else where=`<h3>Bangkok</h3><p>กรุงเทพฯ · วันหยุด</p>`;
- if(D&&D.th.length) reach=`<h3 class="tm tnum">${win(D.th)}</h3><p>เวลาไทย${D.city!=="bkk"?` · ${winEu(D.th)} เวลายุโรป`:""}</p>`;
- else if(I.cls==="work"||I.cls==="back") reach=`<h3 class="th">เวลาทำงานปกติ</h3><p>09:00–18:00</p>`;
- else reach=`<h3 class="th">ไม่ได้เช็คข้อความ</h3><p>เรื่องด่วนส่ง Slack ไว้ จะตอบในวันทำการถัดไป</p>`;
+ if(I.away) reach=`<h3 class="th">ฝากข้อความไว้ได้</h3><p>เรื่องด่วนติดต่อหัวหน้าทีมงาน หรือคนที่มอบหมายไว้</p>`;
+ else if(I.cls==="work") reach=`<h3 class="th">เวลาทำงานปกติ</h3><p>09:00–18:00</p>`;
+ else reach=`<h3 class="th">วันหยุด</h3><p>เรื่องด่วนติดต่อหัวหน้าทีมงาน หรือคนที่มอบหมายไว้</p>`;
  $("#panel").innerHTML=`
-  <div><span class="lbl">${WFULL[I.dow]} · ${MEN[I.m]} ${I.d}, ${I.y}</span><h3 class="th">${WD[I.dow]} ${I.d} ${MON[I.m]}</h3><p>${D?D.st+(D.sub?` · ${D.sub}`:""):I.s}</p></div>
+  <div><span class="lbl">${WFULL[I.dow]} · ${MEN[I.m]} ${I.d}, ${I.y}</span><h3 class="th">${WD[I.dow]} ${I.d} ${MON[I.m]}</h3><p>${I.s}</p></div>
   <div><span class="lbl">Location</span>${where}</div>
-  <div><span class="lbl">Reachable</span>${reach}</div>`;
+  <div><span class="lbl">Contact</span>${reach}</div>`;
 }
 
-function buildHours(){
- const pct=h=>(h/24*100).toFixed(3)+"%";
- const office=`<span class="office" style="left:${pct(9)};width:${pct(9)}"></span>`;
- let h=`<div class="hh"><span class="lbl">Date</span><span class="lbl">City</span><span class="lbl h3">Status</span><div class="scale">${[0,6,12,18,24].map(x=>`<span style="left:${pct(x)}">${p2(x)}:00</span>`).join("")}</div></div>`;
- for(const [k,D] of Object.entries(DAY)){
-  const dt=parse(k),off=!D.th.length,f=off?0:D.th[0][0];
-  const segs=D.th.map(([s,e])=>`<span class="seg" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("")+(D.fly||[]).map(([s,e])=>`<span class="fly" style="left:${pct(s)};width:${pct(e-s)}"></span>`).join("");
-  const lab=off?`<span class="lab m" style="left:0">ไม่ได้เช็คข้อความ</span>`:(f>12?`<span class="lab tnum" style="right:${(100-D.th[D.th.length-1][1]/24*100).toFixed(3)}%">${win(D.th)}</span>`:`<span class="lab tnum" style="left:${pct(f)}">${win(D.th)}</span>`);
-  h+=`<div class="hr${off?" off":""}"><div class="dt"><b class="tnum">${dt.getDate()}</b><span class="lbl">${WEN[dt.getDay()]} · ${MEN[dt.getMonth()]}</span></div><div class="ct">${CITY[D.city].en}</div><div class="st">${D.st}${D.sub?`<small>${D.sub}</small>`:""}</div><div class="track" role="img" aria-label="${off?"ไม่ได้เช็คข้อความ":"ติดต่อได้ "+win(D.th)+" เวลาไทย"}">${office}${segs}${lab}</div></div>`;
- }
- $("#hrs").innerHTML=h;
-}
 
 const CAM=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="1"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>`;
-function availHTML(D){
- if(D.type==="work") return `<div class="avail"><div><span class="lbl">Team</span><b>ทำงานปกติ</b></div><div><span class="lbl">Bangkok</span><b class="tnum">09:00–18:00</b></div><div><span class="lbl">Evening</span><b>บินคืนนี้</b></div></div>`;
- if(!D.th.length) return `<div class="avail"><div><span class="lbl">Team</span><b class="no">${D.type==="hol"?"วันหยุด":"ไม่ได้เช็คข้อความ"}</b></div><div><span class="lbl">Local</span><b class="no">—</b></div><div><span class="lbl">Thailand</span><b class="no">—</b></div></div>`;
- return `<div class="avail"><div><span class="lbl">Team</span><b>${D.sub||"ตอบช่วงสั้น"}</b></div><div><span class="lbl">Local</span><b class="tnum">${winEu(D.th)}</b></div><div><span class="lbl">Thailand</span><b class="tnum">${win(D.th)}</b></div></div>`;
-}
 function dayHTML(k){
  const D=DAY[k],dt=parse(k),dow=dt.getDay();
  const dh=`<div class="dh"><b class="tnum">${dt.getDate()}</b><div><span class="lbl">${WFULL[dow]} · ${MEN[dt.getMonth()]}</span><span class="temp">${D.temp}</span></div></div>`;
  const fl=D.fl?`<div class="fl-mini"><img src="img/logo/thai.svg" alt="Thai Airways" width="102" height="22"><span>${D.fl}</span></div>`:"";
  const head=`<span class="type ${D.type}"><i></i>${D.tl}</span><div><h3>${D.title}</h3><p class="en">${D.en}</p><p class="lede">${D.lede}</p>${fl}</div>`;
- if(!D.items) return `<article class="day plain" id="d-${k}"><div class="tx">${dh}${head}${availHTML(D)}</div></article>`;
+ if(!D.items) return `<article class="day plain" id="d-${k}"><div class="tx">${dh}${head}</div></article>`;
  const potd=D.potd?`<div class="potd">${CAM}<div><span class="lbl">Photo of the Day</span><b>${D.potd}</b></div></div>`:"";
- return `<article class="day" id="d-${k}"><figure class="rv"><div class="ph">${pic(D.img,"(max-width:700px) 100vw, 46vw",D.cap)}</div><figcaption>${D.cap}</figcaption></figure><div class="tx">${dh}${head}<ol class="pl">${D.items.map(([t,n],i)=>`<li><span class="k tnum">${i+1}</span><div><b>${t}</b><span>${n}</span></div></li>`).join("")}</ol>${potd}${availHTML(D)}</div></article>`;
+ return `<article class="day" id="d-${k}"><figure class="rv"><div class="ph">${pic(D.img,"(max-width:700px) 100vw, 46vw",D.cap)}</div><figcaption>${D.cap}</figcaption></figure><div class="tx">${dh}${head}<ol class="pl">${D.items.map(([t,n],i)=>`<li><span class="k tnum">${i+1}</span><div><b>${t}</b><span>${n}</span></div></li>`).join("")}</ol>${potd}</div></article>`;
 }
 function buildDaily(){
  $("#chapters").innerHTML=`<div class="wrap">${dayHTML("2026-12-17")}</div>`+CHAPTERS.map(c=>`
@@ -956,13 +929,13 @@ function initMaps(){
 const fmt=tz=>new Intl.DateTimeFormat("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date());
 function tick(){$("#tBkk").textContent=fmt("Asia/Bangkok");$("#tEu").textContent=fmt("Europe/Paris");}
 
-buildCal();buildHours();buildDaily();tick();setInterval(tick,15000);
-{const tk=keyOf(bkkToday());show(DAY[tk]||tk==="2027-01-04"?tk:"2026-12-18");}
+buildCal();buildDaily();tick();setInterval(tick,15000);
+{const tk=keyOf(bkkToday());show(DAY[tk]?tk:"2026-12-18");}
 addEventListener("load",initMaps);
 
 const links=[...document.querySelectorAll(".mast a.n")],mnav=document.querySelector(".mnav");
 const navIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id));const m=mnav.querySelector("a.on");if(m&&mnav.scrollWidth>mnav.clientWidth)mnav.scrollTo({left:Math.max(0,m.offsetLeft-24),behavior:"smooth"});}),{rootMargin:"-40% 0px -55% 0px"});
-["programme","flights","route","stays","availability","daily","rituals","absence"].forEach(id=>navIO.observe(document.getElementById(id)));
+["programme","flights","route","stays","calendar","daily","rituals","absence"].forEach(id=>navIO.observe(document.getElementById(id)));
 const revIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");revIO.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll(".chero,.rv").forEach(el=>revIO.observe(el));
 
